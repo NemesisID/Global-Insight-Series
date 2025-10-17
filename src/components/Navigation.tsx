@@ -55,7 +55,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
               transition={{ duration: 0.6 }}
             >
               <span>
-                <img src="public\assets\logo.png" alt="GIS Logo" />
+                <img src="assets\logo.png" alt="GIS Logo" />
               </span>
             </motion.div>
             <div>

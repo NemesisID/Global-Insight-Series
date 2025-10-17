@@ -161,7 +161,7 @@ export function Home({ onNavigate }: HomeProps) {
         {/* Background Image */}
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)]">
           <ImageWithFallback
-            src="public/assets/bg.jpeg"
+            src="assets/bg.jpeg"
             alt="Campus"
             className="w-full h-full object-cover opacity-30"
           />

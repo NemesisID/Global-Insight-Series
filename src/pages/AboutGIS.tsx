@@ -70,8 +70,7 @@ export function AboutGIS() {
                   transition={{ duration: 3, repeat: Infinity }}
                 />
                 <motion.div
-                  className="relative w-48 h-48 mx-auto bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)] rounded-full flex items-center justify-center shadow-2xl"
-                  whileHover={{ scale: 1.05, rotate: 5 }}
+                  className="relative w-48 h-48 mx-auto from-[var(--forest-green)] to-[var(--olive-green)] flex items-center justify-center"
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <motion.span
@@ -79,7 +78,7 @@ export function AboutGIS() {
                     animate={{ scale: [1, 1.1, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   >
-                    GIS
+                    <img src="assets/logo.png" alt="logo" />
                   </motion.span>
                 </motion.div>
                 <motion.div

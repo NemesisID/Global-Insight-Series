@@ -39,7 +39,7 @@ export function Footer({ onNavigate }: FooterProps) {
                 transition={{ duration: 0.6 }}
               >
                 <span className="text-2xl from-[var(--forest-green)] to-[var(--olive-green)] bg-clip-text text-transparent">
-                  <img src="public/assets/logo.png" alt="GIS Logo" />
+                  <img src="assets/logo.png" alt="GIS Logo" />
                 </span>
               </motion.div>
               <div>
