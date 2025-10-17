@@ -76,7 +76,7 @@ export function FounderMembers() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-white/90"
           >
-            A Global Network of Leading Universities
+            Lorem, ipsum dolor sit amet consectetur adipisicing.
           </motion.p>
         </div>
       </section>

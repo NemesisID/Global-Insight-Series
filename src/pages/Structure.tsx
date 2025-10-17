@@ -1,6 +1,13 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
-import { Users, User, Sparkles, Building2, Target, Network } from "lucide-react";
+import {
+  Users,
+  User,
+  Sparkles,
+  Building2,
+  Target,
+  Network,
+} from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { FloatingElements } from "../components/FloatingElements";
 
@@ -112,10 +119,11 @@ export function Structure() {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-white/90"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl text-white/90 max-w-3xl mx-auto"
           >
-            Meet the Team Behind Global Insight Series
+            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
           </motion.p>
         </div>
       </section>
@@ -124,7 +132,7 @@ export function Structure() {
       <AnimatedSection>
         <section className="py-20 bg-gradient-to-br from-[#f0f9f4] via-white to-[#fefcf7] relative overflow-hidden">
           <FloatingElements />
-          
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <motion.div
@@ -132,13 +140,15 @@ export function Structure() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Network className="w-4 h-4 text-[var(--forest-green)] mr-2" />
-                <span className="text-sm text-[var(--forest-green)]">Our Team</span>
+                <span className="text-sm text-[var(--forest-green)]">
+                  Our Team
+                </span>
               </motion.div>
               <h2 className="text-4xl md:text-5xl text-[var(--forest-green)] mb-4">
                 Organizational Structure
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                A dedicated team working together to advance international academic collaboration
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quod quis doloremque!
               </p>
             </div>
 
@@ -152,20 +162,21 @@ export function Structure() {
                   viewport={{ once: true }}
                   className="flex justify-center"
                 >
-                  <motion.div
-                    className="relative"
-                    whileHover={{ scale: 1.05 }}
-                  >
+                  <motion.div className="relative" whileHover={{ scale: 1.05 }}>
                     <motion.div
                       className="absolute -inset-4 bg-gradient-to-r from-[var(--forest-green)] to-[var(--gold)] rounded-3xl blur-2xl opacity-20"
                       animate={{ rotate: [0, 360] }}
-                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 20,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                     />
                     <Card className="relative bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)] text-white border-0 shadow-2xl overflow-hidden min-w-[320px]">
                       {/* Decorative elements */}
                       <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl transform translate-x-8 -translate-y-8" />
                       <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full blur-xl transform -translate-x-4 translate-y-4" />
-                      
+
                       <CardContent className="p-8 text-center relative z-10">
                         <motion.div
                           className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
@@ -173,7 +184,9 @@ export function Structure() {
                         >
                           <Target className="w-8 h-8 text-white" />
                         </motion.div>
-                        <div className="text-sm text-white/70 mb-2 uppercase tracking-wider">Director</div>
+                        <div className="text-sm text-white/70 mb-2 uppercase tracking-wider">
+                          Director
+                        </div>
                         <div className="text-xl">Global Insight Series</div>
                         <motion.div
                           className="mt-3 h-1 w-20 bg-white/30 rounded-full mx-auto"
@@ -183,7 +196,7 @@ export function Structure() {
                         />
                       </CardContent>
                     </Card>
-                    
+
                     {/* Connector to next level */}
                     <motion.div
                       className="absolute left-1/2 -bottom-12 w-px h-12 bg-gradient-to-b from-[var(--forest-green)] to-transparent -translate-x-1/2"
@@ -205,11 +218,21 @@ export function Structure() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
                   />
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto pt-12">
                     {[
-                      { title: "Deputy Director", subtitle: "Academic Affairs", icon: Users, color: "from-blue-500 to-blue-700" },
-                      { title: "Deputy Director", subtitle: "Partnerships", icon: Network, color: "from-purple-500 to-purple-700" },
+                      {
+                        title: "Deputy Director",
+                        subtitle: "Academic Affairs",
+                        icon: Users,
+                        color: "from-blue-500 to-blue-700",
+                      },
+                      {
+                        title: "Deputy Director",
+                        subtitle: "Partnerships",
+                        icon: Network,
+                        color: "from-purple-500 to-purple-700",
+                      },
                     ].map((item, index) => (
                       <motion.div
                         key={index}
@@ -227,9 +250,11 @@ export function Structure() {
                           viewport={{ once: true }}
                           transition={{ delay: 0.7 + index * 0.1 }}
                         />
-                        
+
                         <motion.div whileHover={{ y: -5 }}>
-                          <Card className={`bg-gradient-to-br ${item.color} text-white border-0 shadow-xl overflow-hidden`}>
+                          <Card
+                            className={`bg-gradient-to-br ${item.color} text-white border-0 shadow-xl overflow-hidden`}
+                          >
                             <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-xl transform translate-x-6 -translate-y-6" />
                             <CardContent className="p-6 text-center relative z-10">
                               <motion.div
@@ -238,7 +263,9 @@ export function Structure() {
                               >
                                 <item.icon className="w-6 h-6 text-white" />
                               </motion.div>
-                              <div className="text-xs text-white/70 mb-1 uppercase tracking-wider">{item.title}</div>
+                              <div className="text-xs text-white/70 mb-1 uppercase tracking-wider">
+                                {item.title}
+                              </div>
                               <div className="text-lg">{item.subtitle}</div>
                             </CardContent>
                           </Card>
@@ -251,9 +278,21 @@ export function Structure() {
                 {/* Department Heads Level */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
                   {[
-                    { dept: "International Relations", icon: Network, color: "from-[var(--gold)] to-[var(--bronze)]" },
-                    { dept: "Program Development", icon: Target, color: "from-teal-500 to-teal-700" },
-                    { dept: "Research Collaboration", icon: Sparkles, color: "from-orange-500 to-orange-700" },
+                    {
+                      dept: "International Relations",
+                      icon: Network,
+                      color: "from-[var(--gold)] to-[var(--bronze)]",
+                    },
+                    {
+                      dept: "Program Development",
+                      icon: Target,
+                      color: "from-teal-500 to-teal-700",
+                    },
+                    {
+                      dept: "Research Collaboration",
+                      icon: Sparkles,
+                      color: "from-orange-500 to-orange-700",
+                    },
                   ].map((item, index) => (
                     <motion.div
                       key={index}
@@ -272,8 +311,12 @@ export function Structure() {
                           >
                             <item.icon className="w-5 h-5 text-white" />
                           </motion.div>
-                          <div className="text-xs text-gray-500 mb-1 uppercase tracking-wider">Head of</div>
-                          <div className="text-sm text-[var(--forest-green)]">{item.dept}</div>
+                          <div className="text-xs text-gray-500 mb-1 uppercase tracking-wider">
+                            Head of
+                          </div>
+                          <div className="text-sm text-[var(--forest-green)]">
+                            {item.dept}
+                          </div>
                         </CardContent>
                       </Card>
                     </motion.div>
@@ -301,7 +344,7 @@ export function Structure() {
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[var(--gold)]/10 to-transparent rounded-full blur-2xl" />
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[var(--forest-green)]/10 to-transparent rounded-full blur-2xl" />
-              
+
               <motion.div
                 className="inline-block mb-6"
                 animate={{ rotate: [0, 10, -10, 0] }}
@@ -311,15 +354,17 @@ export function Structure() {
                   <Users className="w-10 h-10 text-white" />
                 </div>
               </motion.div>
-              
-              <h2 className="text-3xl md:text-4xl text-[var(--forest-green)] mb-6 relative z-10">Advisory Board</h2>
+
+              <h2 className="text-3xl md:text-4xl text-[var(--forest-green)] mb-6 relative z-10">
+                Advisory Board
+              </h2>
               <div className="h-1 w-24 bg-gradient-to-r from-[var(--forest-green)] to-[var(--gold)] rounded-full mx-auto mb-6" />
-              
+
               <p className="text-gray-700 leading-relaxed mb-6 relative z-10">
-                Our Advisory Board consists of distinguished academics and university leaders from our member institutions who provide strategic guidance and oversight to ensure GIS maintains the highest standards of academic excellence and continues to serve the needs of the international academic community.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut incidunt dolore vel officia tenetur vero molestiae eius officiis doloremque provident cum, numquam suscipit at recusandae, porro molestias. Officia rerum minima quis. Aspernatur cum delectus magnam rerum id quibusdam saepe ab. Culpa facere, at vitae soluta temporibus dicta eius.
               </p>
               <p className="text-gray-600 relative z-10">
-                The board meets bi-annually to review programs, set strategic directions, and foster new collaborative opportunities among member universities.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem pariatur quia voluptates ipsam est ipsa dignissimos minima cupiditate voluptatem, aliquam et reiciendis, dolores aspernatur debitis assumenda incidunt.
               </p>
             </motion.div>
           </div>

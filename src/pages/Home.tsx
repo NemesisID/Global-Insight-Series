@@ -1,9 +1,22 @@
 import { motion, useInView } from "motion/react";
 import { useRef, useEffect, useState } from "react";
-import { ArrowRight, Users, Calendar, Globe, Sparkles, TrendingUp, Award, Volume2, VolumeX } from "lucide-react";
+import {
+  ArrowRight,
+  Users,
+  Calendar,
+  Globe,
+  Sparkles,
+  TrendingUp,
+  Award,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Card, CardContent } from "../components/ui/card";
-import { FloatingElements, ParticleField } from "../components/FloatingElements";
+import {
+  FloatingElements,
+  ParticleField,
+} from "../components/FloatingElements";
 
 interface HomeProps {
   onNavigate: (page: string) => void;
@@ -48,7 +61,7 @@ function TypingAnimationTitle() {
     { text: "함께해요", lang: "kr" },
     { text: "Halina't sumali sa amin", lang: "ph" },
     { text: "Únete a nosotros", lang: "co" },
-    { text: "Jom sertai kami", lang: "my" }
+    { text: "Jom sertai kami", lang: "my" },
   ];
   const [currentPhrase, setCurrentPhrase] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -127,10 +140,10 @@ export function Home({ onNavigate }: HomeProps) {
     if (video) {
       // Ensure video is muted for autoplay to work
       video.muted = true;
-      
+
       // Attempt to play the video
       const playPromise = video.play();
-      
+
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
@@ -167,7 +180,7 @@ export function Home({ onNavigate }: HomeProps) {
           />
         </div>
         <div className="absolute inset-0 bg-black/40" />
-        
+
         {/* Floating particles */}
         <ParticleField />
 
@@ -187,9 +200,7 @@ export function Home({ onNavigate }: HomeProps) {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-7xl mb-6 relative"
           >
-            <span className="relative inline-block">
-              Welcome to{" "}
-            </span>
+            <span className="relative inline-block">Welcome to </span>
             <br />
             <span className="bg-gradient-to-r from-white via-[var(--gold)] to-white bg-clip-text text-transparent">
               Global Insight Series
@@ -201,7 +212,8 @@ export function Home({ onNavigate }: HomeProps) {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl mb-12 text-white/90 max-w-4xl mx-auto"
           >
-            Bridging Academic Excellence Across Borders Through International Collaboration
+            Bridging Academic Excellence Across Borders Through International
+            Collaboration
           </motion.p>
 
           {/* Campaign Video Embed */}
@@ -234,10 +246,10 @@ export function Home({ onNavigate }: HomeProps) {
                   onError={(e) => {
                     // Fallback if video fails to load
                     const target = e.currentTarget;
-                    target.style.display = 'none';
+                    target.style.display = "none";
                     const fallback = target.nextElementSibling;
                     if (fallback) {
-                      (fallback as HTMLElement).style.display = 'flex';
+                      (fallback as HTMLElement).style.display = "flex";
                     }
                   }}
                 >
@@ -248,7 +260,7 @@ export function Home({ onNavigate }: HomeProps) {
                     3. Update the src below to match your video filename
                     4. Supported formats: .mp4, .webm, .ogg
                   */}
-                  <source src="/videos/campaign.mp4" type="video/mp4" />
+                  <source src="videos/campaign.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
 
@@ -271,7 +283,10 @@ export function Home({ onNavigate }: HomeProps) {
                 )}
 
                 {/* Fallback Placeholder (shown if video fails to load) */}
-                <div className="absolute inset-0 flex-col items-center justify-center bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)]" style={{ display: 'none' }}>
+                <div
+                  className="absolute inset-0 flex-col items-center justify-center bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)]"
+                  style={{ display: "none" }}
+                >
                   <ImageWithFallback
                     src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwbGVjdHVyZSUyMGhhbGx8ZW58MXx8fHwxNzYwNTE5MjA4fDA&ixlib=rb-4.1.0&q=80&w=1080"
                     alt="Campaign Video Thumbnail"
@@ -288,7 +303,9 @@ export function Home({ onNavigate }: HomeProps) {
                       </div>
                     </motion.div>
                     <p className="text-xl text-white/90">Video Not Found</p>
-                    <p className="text-sm text-white/70 mt-2 px-4">Please add your video file to /public/videos/campaign.mp4</p>
+                    <p className="text-sm text-white/70 mt-2 px-4">
+                      Please add your video file to /public/videos/campaign.mp4
+                    </p>
                   </div>
                 </div>
               </div>
@@ -301,7 +318,8 @@ export function Home({ onNavigate }: HomeProps) {
                 className="mt-4 text-center"
               >
                 <p className="text-sm text-white/80 italic">
-                  "Discover how GIS is transforming international academic collaboration"
+                  "Discover how GIS is transforming international academic
+                  collaboration"
                 </p>
               </motion.div>
             </div>
@@ -351,10 +369,10 @@ export function Home({ onNavigate }: HomeProps) {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                   />
-                  
+
                   {/* Background decoration */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--forest-green)]/5 rounded-full blur-2xl transform translate-x-8 -translate-y-8" />
-                  
+
                   <CardContent className="text-center p-8 relative z-10">
                     <div className="relative inline-block mb-6">
                       <motion.div
@@ -397,16 +415,20 @@ export function Home({ onNavigate }: HomeProps) {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 }}
                   />
-                  
+
                   {/* Background decoration */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--gold)]/10 rounded-full blur-2xl transform translate-x-8 -translate-y-8" />
-                  
+
                   <CardContent className="text-center p-8 relative z-10">
                     <div className="relative inline-block mb-6">
                       <motion.div
                         className="absolute inset-0 bg-[var(--gold)]/10 rounded-full blur-xl"
                         animate={{ scale: [1, 1.2, 1] }}
-                        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: 0.5,
+                        }}
                       />
                       <motion.div
                         className="relative w-20 h-20 mx-auto bg-gradient-to-br from-[var(--gold)] to-[var(--bronze)] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow"
@@ -422,7 +444,9 @@ export function Home({ onNavigate }: HomeProps) {
                       <CountUp end={50} />+
                     </motion.div>
                     <div className="h-px w-16 bg-gradient-to-r from-transparent via-[var(--gold)] to-transparent mx-auto mb-3" />
-                    <p className="text-gray-600">Collaborative Programs Have Been Conducted</p>
+                    <p className="text-gray-600">
+                      Collaborative Programs Have Been Conducted
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -443,10 +467,10 @@ export function Home({ onNavigate }: HomeProps) {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                   />
-                  
+
                   {/* Background decoration */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--olive-green)]/10 rounded-full blur-2xl transform translate-x-8 -translate-y-8" />
-                  
+
                   <CardContent className="text-center p-8 relative z-10">
                     <div className="relative inline-block mb-6">
                       <motion.div
@@ -468,7 +492,9 @@ export function Home({ onNavigate }: HomeProps) {
                       <CountUp end={1000} />+
                     </motion.div>
                     <div className="h-px w-16 bg-gradient-to-r from-transparent via-[var(--olive-green)] to-transparent mx-auto mb-3" />
-                    <p className="text-gray-600">Participants Have Joined Our Programs</p>
+                    <p className="text-gray-600">
+                      Participants Have Joined Our Programs
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -486,35 +512,38 @@ export function Home({ onNavigate }: HomeProps) {
             <motion.div
               className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full"
               style={{
-                background: "radial-gradient(circle, rgba(45, 80, 22, 0.15) 0%, rgba(45, 80, 22, 0.05) 40%, transparent 70%)",
+                background:
+                  "radial-gradient(circle, rgba(45, 80, 22, 0.15) 0%, rgba(45, 80, 22, 0.05) 40%, transparent 70%)",
               }}
-              animate={{ 
+              animate={{
                 x: [0, 100, 0],
                 y: [0, 50, 0],
                 scale: [1, 1.1, 1],
               }}
               transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
             />
-            
+
             <motion.div
               className="absolute -bottom-32 -right-32 w-[700px] h-[700px] rounded-full"
               style={{
-                background: "radial-gradient(circle, rgba(201, 169, 97, 0.2) 0%, rgba(201, 169, 97, 0.08) 40%, transparent 70%)",
+                background:
+                  "radial-gradient(circle, rgba(201, 169, 97, 0.2) 0%, rgba(201, 169, 97, 0.08) 40%, transparent 70%)",
               }}
-              animate={{ 
+              animate={{
                 x: [0, -80, 0],
                 y: [0, -60, 0],
                 scale: [1, 1.15, 1],
               }}
               transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
             />
-            
+
             <motion.div
               className="absolute top-1/3 right-1/4 w-[500px] h-[500px] rounded-full"
               style={{
-                background: "radial-gradient(circle, rgba(74, 103, 65, 0.12) 0%, rgba(74, 103, 65, 0.04) 50%, transparent 70%)",
+                background:
+                  "radial-gradient(circle, rgba(74, 103, 65, 0.12) 0%, rgba(74, 103, 65, 0.04) 50%, transparent 70%)",
               }}
-              animate={{ 
+              animate={{
                 x: [0, -50, 0],
                 y: [0, 80, 0],
                 scale: [1, 1.2, 1],
@@ -525,17 +554,17 @@ export function Home({ onNavigate }: HomeProps) {
             {/* Geometric Shapes for modern look */}
             <motion.div
               className="absolute top-20 right-20 w-32 h-32 border-2 border-[var(--forest-green)]/20 rounded-3xl"
-              animate={{ 
+              animate={{
                 rotate: [0, 90, 180, 270, 360],
                 scale: [1, 1.1, 1],
               }}
               transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             />
-            
+
             <motion.div
               className="absolute bottom-32 left-20 w-24 h-24 border-2 border-[var(--gold)]/30"
               style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
-              animate={{ 
+              animate={{
                 rotate: [0, -360],
                 borderRadius: [
                   "30% 70% 70% 30% / 30% 30% 70% 70%",
@@ -548,7 +577,7 @@ export function Home({ onNavigate }: HomeProps) {
 
             <motion.div
               className="absolute top-1/2 left-1/3 w-20 h-20 bg-gradient-to-br from-[var(--forest-green)]/10 to-[var(--gold)]/10 rounded-2xl"
-              animate={{ 
+              animate={{
                 rotate: [45, 135, 225, 315, 45],
                 y: [0, -30, 0],
               }}
@@ -576,17 +605,20 @@ export function Home({ onNavigate }: HomeProps) {
 
             {/* Subtle Grid Lines for modern tech feel */}
             <div className="absolute inset-0 opacity-5">
-              <div className="absolute inset-0" style={{
-                backgroundImage: `linear-gradient(var(--forest-green) 1px, transparent 1px),
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `linear-gradient(var(--forest-green) 1px, transparent 1px),
                                  linear-gradient(90deg, var(--forest-green) 1px, transparent 1px)`,
-                backgroundSize: '60px 60px',
-              }} />
+                  backgroundSize: "60px 60px",
+                }}
+              />
             </div>
 
             {/* Batik pattern overlay - more subtle */}
             <div className="absolute inset-0 batik-pattern opacity-10" />
           </div>
-          
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -629,16 +661,28 @@ export function Home({ onNavigate }: HomeProps) {
                   whileHover={{ scale: 1.05 }}
                 >
                   <Sparkles className="w-4 h-4 text-[var(--forest-green)] mr-2" />
-                  <span className="text-sm text-[var(--forest-green)]">About Us</span>
+                  <span className="text-sm text-[var(--forest-green)]">
+                    About Us
+                  </span>
                 </motion.div>
                 <h2 className="text-4xl md:text-5xl text-[var(--forest-green)] mb-6">
                   Who Are We?
                 </h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Global Insight Series (GIS) is an innovative international academic program initiated by UPN "Veteran" Jawa Timur. We are dedicated to fostering global academic collaboration, cross-cultural understanding, and knowledge exchange among universities worldwide.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.
                 </p>
                 <p className="text-gray-700 mb-8 leading-relaxed">
-                  Through our diverse range of programs, webinars, and collaborative initiatives, we create opportunities for students, researchers, and academics to connect, share insights, and build meaningful partnerships that transcend geographical boundaries.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Pellentesque habitant morbi tristique senectus et netus et
+                  malesuada fames ac turpis egestas. Vestibulum tortor quam,
+                  feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
+                  libero sit amet quam egestas semper. Aenean ultricies mi vitae
+                  est mauris placerat eleifend leo.
                 </p>
                 <motion.button
                   onClick={() => onNavigate("about-gis")}
@@ -679,10 +723,15 @@ export function Home({ onNavigate }: HomeProps) {
                 Our Programs
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto text-base">
-                GIS continues to spearhead numerous collaborative programs with global institutions, dedicated to community development and services that actively contribute to the achievement of Sustainable Development Goals (SDGs). The following encapsulates GIS's annual programs.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur excepteur sint occaecat cupidatat non proident.
               </p>
             </div>
-            
+
             {/* Programs Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -691,42 +740,48 @@ export function Home({ onNavigate }: HomeProps) {
                   icon: Globe,
                   iconColor: "text-red-500",
                   bgColor: "bg-red-50",
-                  description: "Building sustainable communities through global partnerships",
+                  description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
                 },
                 {
                   name: "GIS International Conference",
                   icon: Users,
                   iconColor: "text-[var(--forest-green)]",
                   bgColor: "bg-green-50",
-                  description: "Annual gathering of academic leaders and researchers",
+                  description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
                 },
                 {
                   name: "GIS Research Grant & Funding",
                   icon: TrendingUp,
                   iconColor: "text-[var(--gold)]",
                   bgColor: "bg-amber-50",
-                  description: "Supporting innovative research initiatives globally",
+                  description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
                 },
                 {
                   name: "Student Exchange Program",
                   icon: Calendar,
                   iconColor: "text-blue-500",
                   bgColor: "bg-blue-50",
-                  description: "Fostering cross-cultural learning experiences",
+                  description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
                 },
                 {
                   name: "Faculty Development Program",
                   icon: Award,
                   iconColor: "text-purple-500",
                   bgColor: "bg-purple-50",
-                  description: "Enhancing teaching excellence across institutions",
+                  description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
                 },
                 {
                   name: "Joint Research Initiative",
                   icon: Sparkles,
                   iconColor: "text-teal-500",
                   bgColor: "bg-teal-50",
-                  description: "Collaborative research addressing global challenges",
+                  description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
                 },
               ].map((program, index) => (
                 <motion.div
@@ -762,10 +817,14 @@ export function Home({ onNavigate }: HomeProps) {
                               animate={{ scale: [1, 1.2, 1] }}
                               transition={{ duration: 3, repeat: Infinity }}
                             />
-                            
+
                             {/* Icon Circle */}
-                            <div className={`relative w-28 h-28 ${program.bgColor} rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow`}>
-                              <program.icon className={`w-14 h-14 ${program.iconColor}`} />
+                            <div
+                              className={`relative w-28 h-28 ${program.bgColor} rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow`}
+                            >
+                              <program.icon
+                                className={`w-14 h-14 ${program.iconColor}`}
+                              />
                             </div>
                           </motion.div>
                         </div>
@@ -813,7 +872,9 @@ export function Home({ onNavigate }: HomeProps) {
                 whileHover={{ scale: 1.05 }}
               >
                 <Sparkles className="w-4 h-4 text-[var(--forest-green)] mr-2" />
-                <span className="text-sm text-[var(--forest-green)]">Latest Updates</span>
+                <span className="text-sm text-[var(--forest-green)]">
+                  Latest Updates
+                </span>
               </motion.div>
               <h2 className="text-4xl md:text-5xl text-[var(--forest-green)] mb-4">
                 Recent News
@@ -822,7 +883,7 @@ export function Home({ onNavigate }: HomeProps) {
                 Stay updated with our latest activities and announcements
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {[
                 {
@@ -830,32 +891,40 @@ export function Home({ onNavigate }: HomeProps) {
                   date: "October 15, 2025",
                   category: "Event Highlights",
                   categoryColor: "bg-[var(--forest-green)]",
-                  image: "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
-                  excerpt: "The annual GIS International Summit brought together over 500 participants from 30 countries.",
+                  image:
+                    "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+                  excerpt:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
                 },
                 {
                   title: "New Strategic Partnership with Leading Universities",
                   date: "October 12, 2025",
                   category: "Partnership",
                   categoryColor: "bg-blue-600",
-                  image: "https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjA1MjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-                  excerpt: "GIS expands its network by welcoming five prestigious universities from Asia and Europe.",
+                  image:
+                    "https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjA1MjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+                  excerpt:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
                 },
                 {
                   title: "Breakthrough Research on Climate Published",
                   date: "October 10, 2025",
                   category: "Research",
                   categoryColor: "bg-[var(--gold)]",
-                  image: "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-                  excerpt: "A collaborative research team publishes groundbreaking findings on sustainable development.",
+                  image:
+                    "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+                  excerpt:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
                 },
                 {
                   title: "Student Exchange Program Milestone Reached",
                   date: "October 8, 2025",
                   category: "Student Programs",
                   categoryColor: "bg-purple-600",
-                  image: "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-                  excerpt: "GIS celebrates the 1000th student completing their international exchange experience.",
+                  image:
+                    "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+                  excerpt:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
                 },
               ].map((news, index) => (
                 <motion.div
@@ -886,7 +955,7 @@ export function Home({ onNavigate }: HomeProps) {
                           </motion.div>
                         </div>
                       </div>
-                      
+
                       <CardContent className="p-5 flex-1 flex flex-col">
                         <div className="flex items-center text-xs text-gray-500 mb-3">
                           <Calendar className="w-3.5 h-3.5 mr-1.5" />
@@ -911,7 +980,7 @@ export function Home({ onNavigate }: HomeProps) {
                 </motion.div>
               ))}
             </div>
-            
+
             {/* View All News Button */}
             <div className="text-center">
               <motion.button
@@ -933,7 +1002,7 @@ export function Home({ onNavigate }: HomeProps) {
         <section className="py-32 bg-gradient-to-br from-[var(--forest-green)] via-[var(--olive-green)] to-[var(--forest-green)] text-white relative overflow-hidden">
           <ParticleField />
           <FloatingElements />
-          
+
           <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
             <motion.div
               initial={{ scale: 0 }}
@@ -941,8 +1010,7 @@ export function Home({ onNavigate }: HomeProps) {
               viewport={{ once: true }}
               transition={{ type: "spring", stiffness: 200 }}
               className="mb-8"
-            >
-            </motion.div>
+            ></motion.div>
 
             <motion.h2
               className="text-5xl md:text-7xl mb-12 min-h-[100px] flex items-center justify-center"
@@ -963,9 +1031,9 @@ export function Home({ onNavigate }: HomeProps) {
               <p className="text-2xl md:text-3xl text-white/90">
                 To build a global network.
               </p>
-              <p className="text-2xl md:text-3xl text-white/90">
-                Untuk berkolaborasi secara internasional.
-              </p>
+                <p className="text-2xl md:text-3xl text-white/90">
+                To collaborate internationally.
+                </p>
               <p className="text-2xl md:text-3xl text-white/90">
                 To create a better future.
               </p>

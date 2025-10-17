@@ -66,7 +66,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "October 15, 2025",
       category: "Event Highlights",
       excerpt:
-        "The annual GIS International Summit brought together over 500 participants from 30 countries, featuring keynote speeches from world-renowned educators and collaborative workshops on the future of higher education.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -74,7 +74,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "October 12, 2025",
       category: "Partnership",
       excerpt:
-        "GIS expands its network by welcoming five prestigious universities from Japan, South Korea, and Singapore to strengthen regional academic collaboration and student mobility programs.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjA1MjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -82,7 +82,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "October 10, 2025",
       category: "Research Excellence",
       excerpt:
-        "A collaborative research team from 12 GIS member universities publishes groundbreaking findings on sustainable urban development in leading international journal Nature Sustainability.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -90,7 +90,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "October 8, 2025",
       category: "Student Programs",
       excerpt:
-        "GIS celebrates a significant milestone as the 1000th student completes their international exchange experience, showcasing the program's success in fostering global citizenship and cross-cultural understanding.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -98,7 +98,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "October 5, 2025",
       category: "Event Highlights",
       excerpt:
-        "The latest GIS webinar series on Artificial Intelligence applications in higher education attracted record attendance, with participants exploring innovative teaching methods and learning analytics.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMGNvbmZlcmVuY2V8ZW58MXx8fHwxNzYwNTg5ODc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -106,7 +106,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "October 3, 2025",
       category: "Academic Programs",
       excerpt:
-        "New professional development initiative empowers 200+ faculty members with innovative pedagogical approaches, assessment strategies, and digital teaching tools for 21st-century education.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwbGVjdHVyZSUyMGhhbGx8ZW58MXx8fHwxNzYwNTE5MjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -114,7 +114,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 30, 2025",
       category: "Awards & Recognition",
       excerpt:
-        "Global Insight Series receives prestigious UNESCO Award for Outstanding Contribution to International Academic Cooperation, recognizing five years of impactful initiatives and partnerships.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYwNTIwNzc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -122,7 +122,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 28, 2025",
       category: "Research Excellence",
       excerpt:
-        "Multi-university team wins $2.5 million research grant to investigate innovative solutions for sustainable development goals through collaborative interdisciplinary approaches.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1725618878496-233974f2fd59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcm5hdGlvbmFsJTIwc3R1ZGVudHMlMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc2MDU4OTg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -130,7 +130,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 25, 2025",
       category: "Academic Programs",
       excerpt:
-        "GIS launches comprehensive training program for university leaders on digital transformation strategies, covering data-driven decision making and technology integration in education management.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -138,7 +138,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 22, 2025",
       category: "Research Excellence",
       excerpt:
-        "Member universities collaborate to establish new open-access academic journal focusing on cross-cultural studies, international education policy, and global academic partnerships.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjA1MjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -146,7 +146,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 20, 2025",
       category: "Student Programs",
       excerpt:
-        "Applications now open for GIS International Summer School 2026, featuring intensive courses, cultural immersion activities, and networking opportunities with fully-funded scholarships available.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -154,7 +154,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 18, 2025",
       category: "Academic Programs",
       excerpt:
-        "Inaugural class of 45 future academic leaders completes intensive leadership development program, equipped with skills for managing international partnerships and diverse academic environments.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -162,7 +162,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 15, 2025",
       category: "Partnership",
       excerpt:
-        "Strategic collaboration agreement establishes framework for joint degree programs, research initiatives, and faculty exchanges with consortium of 15 European institutions.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMGNvbmZlcmVuY2V8ZW58MXx8fHwxNzYwNTg5ODc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -170,7 +170,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 12, 2025",
       category: "Student Programs",
       excerpt:
-        "Innovative digital platform allows students to explore partner universities through immersive 360° tours, virtual open houses, and direct interactions with current international students.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwbGVjdHVyZSUyMGhhbGx8ZW58MXx8fHwxNzYwNTE5MjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -178,7 +178,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 10, 2025",
       category: "Event Highlights",
       excerpt:
-        "Educators and researchers invited to submit proposals for upcoming conference showcasing best practices in pedagogical innovation, assessment reform, and educational technology integration.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYwNTIwNzc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -186,7 +186,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 8, 2025",
       category: "Community",
       excerpt:
-        "Growing GIS alumni community celebrates milestone membership, strengthening professional networks and creating mentorship opportunities for current students through global connections.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1725618878496-233974f2fd59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcm5hdGlvbmFsJTIwc3R1ZGVudHMlMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc2MDU4OTg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -194,7 +194,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 5, 2025",
       category: "Academic Programs",
       excerpt:
-        "First collaborative degree program enables students to study at multiple GIS institutions, earning recognized qualifications while gaining international experience in public health and epidemiology.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -202,7 +202,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 3, 2025",
       category: "Research Excellence",
       excerpt:
-        "Comprehensive training program addresses responsible conduct in research, data management, publication ethics, and collaborative research practices for doctoral students across member institutions.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjA1MjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -210,7 +210,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "September 1, 2025",
       category: "Partnership",
       excerpt:
-        "New corporate partnerships provide 200+ international internship placements for GIS students, bridging academic learning with professional experience in global companies.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -218,7 +218,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "August 28, 2025",
       category: "Awards & Recognition",
       excerpt:
-        "Five member universities honored for outstanding achievements in environmental sustainability, carbon neutrality programs, and green infrastructure development on campus.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -226,7 +226,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "August 25, 2025",
       category: "Student Programs",
       excerpt:
-        "Enhanced language learning opportunities now available for students interested in mastering diverse languages while engaging with authentic cultural experiences through buddy systems.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMGNvbmZlcmVuY2V8ZW58MXx8fHwxNzYwNTg5ODc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -234,7 +234,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "August 22, 2025",
       category: "Community",
       excerpt:
-        "State-of-the-art facility provides resources, mentorship, and funding opportunities for student-led startups and social enterprises, fostering entrepreneurial mindset among future leaders.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwbGVjdHVyZSUyMGhhbGx8ZW58MXx8fHwxNzYwNTE5MjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -242,7 +242,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "August 20, 2025",
       category: "Student Programs",
       excerpt:
-        "Comprehensive wellbeing initiative provides counseling services, peer support networks, and stress management workshops specifically designed for international students and exchange participants.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYwNTIwNzc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -250,7 +250,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "August 18, 2025",
       category: "Academic Programs",
       excerpt:
-        "Intensive skill-building program equips students with practical data analytics capabilities, machine learning fundamentals, and visualization techniques for research and career advancement.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1725618878496-233974f2fd59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcm5hdGlvbmFsJTIwc3R1ZGVudHMlMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc2MDU4OTg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -258,7 +258,7 @@ export function News({ onNavigate }: NewsProps) {
       date: "August 15, 2025",
       category: "Community",
       excerpt:
-        "Comprehensive strategy promotes equity, celebrates cultural diversity, and creates inclusive learning environments through awareness campaigns, training workshops, and policy reforms.",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur unde incidunt corrupti architecto nemo distinctio ratione ipsum, cum beatae animi praesentium maxime optio obcaecati esse. Dolorum illum eum dolorem consectetur.",
       image: "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
   ];
@@ -369,7 +369,7 @@ export function News({ onNavigate }: NewsProps) {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-xl text-white/90 max-w-3xl mx-auto"
           >
-            Stay informed with the latest achievements, partnerships, and milestones from Global Insight Series
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatem fuga, maxime sit ipsam unde optio.
           </motion.p>
         </div>
       </section>

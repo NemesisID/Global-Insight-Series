@@ -46,7 +46,7 @@ export function AboutGIS() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-white/90"
           >
-            Empowering Global Academic Excellence Through Collaboration
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </motion.p>
         </div>
       </section>
@@ -84,7 +84,11 @@ export function AboutGIS() {
                 <motion.div
                   className="absolute -top-4 -right-4"
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
                 >
                   <Sparkles className="w-8 h-8 text-[var(--gold)]" />
                 </motion.div>
@@ -121,22 +125,24 @@ export function AboutGIS() {
             <motion.div
               className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full"
               style={{
-                background: "radial-gradient(circle, rgba(45, 80, 22, 0.12) 0%, rgba(45, 80, 22, 0.04) 50%, transparent 70%)",
+                background:
+                  "radial-gradient(circle, rgba(45, 80, 22, 0.12) 0%, rgba(45, 80, 22, 0.04) 50%, transparent 70%)",
               }}
-              animate={{ 
+              animate={{
                 x: [0, 80, 0],
                 y: [0, 60, 0],
                 scale: [1, 1.15, 1],
               }}
               transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
             />
-            
+
             <motion.div
               className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full"
               style={{
-                background: "radial-gradient(circle, rgba(201, 169, 97, 0.15) 0%, rgba(201, 169, 97, 0.06) 50%, transparent 70%)",
+                background:
+                  "radial-gradient(circle, rgba(201, 169, 97, 0.15) 0%, rgba(201, 169, 97, 0.06) 50%, transparent 70%)",
               }}
-              animate={{ 
+              animate={{
                 x: [0, -60, 0],
                 y: [0, -80, 0],
                 scale: [1, 1.2, 1],
@@ -150,11 +156,11 @@ export function AboutGIS() {
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
             />
-            
+
             <motion.div
               className="absolute bottom-40 left-16 w-20 h-20 border-2 border-[var(--gold)]/30"
               style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
-              animate={{ 
+              animate={{
                 rotate: [0, -360],
                 borderRadius: [
                   "30% 70% 70% 30% / 30% 30% 70% 70%",
@@ -175,11 +181,11 @@ export function AboutGIS() {
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                   }}
-                  animate={{ 
+                  animate={{
                     scale: [1, 1.5, 1],
                     opacity: [0.2, 0.5, 0.2],
                   }}
-                  transition={{ 
+                  transition={{
                     duration: 3 + Math.random() * 2,
                     repeat: Infinity,
                     delay: Math.random() * 2,
@@ -202,7 +208,7 @@ export function AboutGIS() {
               {/* Enhanced decorative corner elements */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[var(--gold)]/15 to-transparent rounded-bl-[100px]" />
               <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-[var(--forest-green)]/15 to-transparent rounded-tr-[100px]" />
-              
+
               {/* Decorative accent lines */}
               <motion.div
                 className="absolute top-0 left-0 w-1 h-32 bg-gradient-to-b from-[var(--forest-green)] to-transparent"
@@ -218,7 +224,7 @@ export function AboutGIS() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               />
-              
+
               <div className="relative z-10">
                 {/* Header with enhanced styling */}
                 <div className="flex items-center mb-8 relative">
@@ -230,19 +236,25 @@ export function AboutGIS() {
                     <motion.div
                       className="absolute inset-0 bg-white/20"
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                     />
                     <BookOpen className="w-7 h-7 text-white relative z-10" />
                   </motion.div>
                   <div>
-                    <h2 className="text-3xl md:text-4xl text-[var(--forest-green)]">What is GIS?</h2>
+                    <h2 className="text-3xl md:text-4xl text-[var(--forest-green)]">
+                      What is GIS?
+                    </h2>
                     <div className="h-1 w-24 bg-gradient-to-r from-[var(--forest-green)] to-[var(--gold)] rounded-full mt-2" />
                   </div>
-                  
+
                   {/* Floating sparkle */}
                   <motion.div
                     className="absolute -right-2 -top-2"
-                    animate={{ 
+                    animate={{
                       rotate: [0, 360],
                       scale: [1, 1.2, 1],
                     }}
@@ -251,14 +263,24 @@ export function AboutGIS() {
                     <Sparkles className="w-6 h-6 text-[var(--gold)]" />
                   </motion.div>
                 </div>
-              
+
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p>
-                    Global Insight Series (GIS) is a pioneering international academic initiative established by UPN "Veteran" Jawa Timur to foster meaningful connections and collaborations among higher education institutions worldwide. As a dynamic platform for knowledge exchange, GIS serves as a bridge connecting scholars, researchers, and students across continents.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.
                   </p>
 
                   <p>
-                    Founded with the vision of creating a truly global academic community, GIS has grown from a modest beginning to become a recognized network of universities committed to excellence in education, research, and cultural exchange. Our program embodies the spirit of international cooperation and mutual learning.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque habitant morbi tristique senectus et netus et
+                    malesuada fames ac turpis egestas. Vestibulum tortor quam,
+                    feugiat vitae, ultricies eget, tempor sit amet, ante. Donec
+                    eu libero sit amet quam egestas semper. Aenean ultricies mi
+                    vitae est mauris placerat eleifend leo.
                   </p>
 
                   {/* Our History Section with icon */}
@@ -270,15 +292,26 @@ export function AboutGIS() {
                     >
                       <Globe className="w-5 h-5 text-white" />
                     </motion.div>
-                    <h3 className="text-2xl text-[var(--forest-green)]">Our History</h3>
+                    <h3 className="text-2xl text-[var(--forest-green)]">
+                      Our History
+                    </h3>
                   </div>
-                  
+
                   <p>
-                    Launched in 2020, Global Insight Series emerged from the recognition that the challenges and opportunities of the 21st century require collaborative, cross-border solutions. What began as a series of international webinars has evolved into a comprehensive program encompassing research collaborations, academic conferences, student exchanges, and faculty development initiatives.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore.
                   </p>
 
                   <p>
-                    Over the years, GIS has successfully brought together more than 25 universities from across Asia, Europe, and beyond, facilitating over 50 collaborative programs and engaging thousands of participants in meaningful academic discourse.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque habitant morbi tristique senectus et netus et
+                    malesuada fames ac turpis egestas. Vestibulum tortor quam,
+                    feugiat vitae, ultricies eget tempor sit amet ante donec eu
+                    libero.
                   </p>
 
                   {/* Our Purpose Section with icon */}
@@ -290,21 +323,25 @@ export function AboutGIS() {
                     >
                       <Users className="w-5 h-5 text-white" />
                     </motion.div>
-                    <h3 className="text-2xl text-[var(--forest-green)]">Our Purpose</h3>
+                    <h3 className="text-2xl text-[var(--forest-green)]">
+                      Our Purpose
+                    </h3>
                   </div>
-                  
+
                   <p>
-                    The primary objective of Global Insight Series is to create sustainable partnerships that enhance the quality of education and research at participating institutions. We aim to:
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam:
                   </p>
 
                   {/* Enhanced bullet list with custom styling */}
                   <ul className="space-y-3 my-6">
                     {[
-                      "Facilitate knowledge sharing and best practice exchange among international academics",
-                      "Promote collaborative research addressing global challenges",
-                      "Provide opportunities for students and faculty to engage in international experiences",
-                      "Foster cross-cultural understanding and global citizenship",
-                      "Build lasting institutional partnerships that benefit all member universities"
+                      "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
+                      "Tempor incididunt ut labore et dolore magna aliqua ut enim ad minim",
+                      "Veniam quis nostrud exercitation ullamco laboris nisi ut aliquip commodo",
+                      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+                      "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia",
                     ].map((item, index) => (
                       <motion.li
                         key={index}
@@ -328,7 +365,10 @@ export function AboutGIS() {
                   </ul>
 
                   <p>
-                    Through our diverse programming and commitment to excellence, GIS continues to expand its reach and impact, creating opportunities for academic institutions to thrive in an increasingly interconnected world.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque habitant morbi tristique senectus et netus et
+                    malesuada fames ac turpis egestas vestibulum tortor quam
+                    feugiat vitae ultricies.
                   </p>
 
                   {/* Why Join GIS Section with icon */}
@@ -340,11 +380,17 @@ export function AboutGIS() {
                     >
                       <Sparkles className="w-5 h-5 text-white" />
                     </motion.div>
-                    <h3 className="text-2xl text-[var(--forest-green)]">Why Join GIS?</h3>
+                    <h3 className="text-2xl text-[var(--forest-green)]">
+                      Why Join GIS?
+                    </h3>
                   </div>
-                  
+
                   <p>
-                    Participating in Global Insight Series offers numerous benefits including access to a network of leading institutions, opportunities for joint research and publications, enhanced international visibility, and the chance to contribute to a global academic community dedicated to positive change.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat duis
+                    aute irure dolor.
                   </p>
 
                   <motion.p
@@ -353,9 +399,12 @@ export function AboutGIS() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                   >
-                    Whether you are a university administrator, faculty member, researcher, or student, GIS provides a welcoming and dynamic environment for collaboration, innovation, and growth. Join us in shaping the future of international higher education.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque habitant morbi tristique senectus et netus et
+                    malesuada fames ac turpis egestas. Vestibulum tortor quam,
+                    feugiat vitae ultricies eget tempor sit amet ante.
                   </motion.p>
-                  
+
                   {/* Call to action highlight box */}
                   <motion.div
                     className="mt-8 p-6 bg-gradient-to-r from-[var(--forest-green)]/5 to-[var(--gold)]/5 rounded-2xl border-l-4 border-[var(--forest-green)]"
@@ -372,9 +421,13 @@ export function AboutGIS() {
                         <Sparkles className="w-6 h-6 text-[var(--gold)] mr-3 flex-shrink-0 mt-1" />
                       </motion.div>
                       <div>
-                        <h4 className="text-lg text-[var(--forest-green)] mb-2">Ready to Join Our Global Network?</h4>
+                        <h4 className="text-lg text-[var(--forest-green)] mb-2">
+                          Ready to Join Our Global Network?
+                        </h4>
                         <p className="text-gray-600 text-sm">
-                          Connect with leading universities worldwide and become part of a community dedicated to academic excellence and international collaboration.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
                         </p>
                       </div>
                     </div>

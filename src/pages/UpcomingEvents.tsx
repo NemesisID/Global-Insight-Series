@@ -64,7 +64,7 @@ export function UpcomingEvents() {
       type: "Conference",
       participants: "200+ Expected",
       description:
-        "🎓 CALLING ALL RESEARCHERS! 📚 Join us at the International Research Symposium - A three-day symposium bringing together researchers from around the world to share their latest findings and foster collaborative opportunities. Connect with leading academics, present your research, and build lasting partnerships.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwbGVjdHVyZSUyMGhhbGx8ZW58MXx8fHwxNzYwNTE5MjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -77,7 +77,7 @@ export function UpcomingEvents() {
       type: "Webinar",
       participants: "500+ Expected",
       description:
-        "🌍 TRANSFORMING EDUCATION TOGETHER! 💡 Interactive webinar featuring university presidents and education leaders discussing the future of higher education in a post-pandemic world. Gain insights from global leaders and participate in dynamic discussions about innovation in academia.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMGNvbmZlcmVuY2V8ZW58MXx8fHwxNzYwNTg5ODc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -90,7 +90,7 @@ export function UpcomingEvents() {
       type: "Forum",
       participants: "150+ Expected",
       description:
-        "🤝 BUILDING REGIONAL PARTNERSHIPS! 🌏 A forum dedicated to strengthening partnerships among Southeast Asian universities through joint programs and research initiatives. Network with university leaders, explore collaboration opportunities, and contribute to regional academic excellence.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYwNTIwNzc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -103,7 +103,7 @@ export function UpcomingEvents() {
       type: "Workshop",
       participants: "100+ Expected",
       description:
-        "💻 INNOVATE YOUR TEACHING! 🎯 Hands-on workshop exploring innovative teaching methodologies and digital learning technologies for faculty members. Learn cutting-edge pedagogical approaches, discover new educational tools, and enhance your teaching effectiveness.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1725618878496-233974f2fd59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcm5hdGlvbmFsJTIwc3R1ZGVudHMlMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc2MDU4OTg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -116,7 +116,7 @@ export function UpcomingEvents() {
       type: "Summit",
       participants: "300+ Expected",
       description:
-        "✨ EMPOWERING FUTURE LEADERS! 🚀 An inspiring event for students to network, learn from global leaders, and develop their leadership skills in an international context. Connect with peers worldwide, attend leadership workshops, and shape your global future.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -129,7 +129,7 @@ export function UpcomingEvents() {
       type: "Orientation",
       participants: "50+ Expected",
       description:
-        "🌟 JOIN OUR GLOBAL FACULTY NETWORK! 📚 Orientation session for faculty members participating in the international exchange program, covering logistics and expectations. Discover opportunities for teaching abroad, cultural exchange, and professional development.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -142,7 +142,7 @@ export function UpcomingEvents() {
       type: "Workshop",
       participants: "80+ Expected",
       description:
-        "📝 ELEVATE YOUR ACADEMIC WRITING! 🎓 Master the art of academic writing and publication with expert guidance. Learn how to publish in high-impact journals, craft compelling research narratives, and navigate the peer-review process successfully.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwbGVjdHVyZSUyMGhhbGx8ZW58MXx8fHwxNzYwNTE5MjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -155,7 +155,7 @@ export function UpcomingEvents() {
       type: "Seminar",
       participants: "200+ Expected",
       description:
-        "🌏 BRIDGE CULTURAL DIVIDES! 🤝 Enhance your cross-cultural communication skills and learn to work effectively in international academic environments. Explore cultural intelligence, overcome communication barriers, and build meaningful global connections.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMGNvbmZlcmVuY2V8ZW58MXx8fHwxNzYwNTg5ODc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -168,7 +168,7 @@ export function UpcomingEvents() {
       type: "Bootcamp",
       participants: "60+ Expected",
       description:
-        "💰 SECURE YOUR RESEARCH FUNDING! 🎯 Intensive bootcamp on preparing competitive research grant proposals. Learn from successful grant recipients, understand funder requirements, and develop winning proposals for international research funding.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYwNTIwNzc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -181,7 +181,7 @@ export function UpcomingEvents() {
       type: "Virtual Tour",
       participants: "300+ Expected",
       description:
-        "🏫 EXPLORE PARTNER UNIVERSITIES! 🌍 Join our virtual tour of GIS partner universities across the globe. Discover campus facilities, academic programs, and student life at leading international institutions. Perfect for students considering exchange programs!",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -194,7 +194,7 @@ export function UpcomingEvents() {
       type: "Conference",
       participants: "400+ Expected",
       description:
-        "🤖 FUTURE OF EDUCATION IS HERE! 💡 Explore the transformative role of artificial intelligence in higher education. Discover AI applications in teaching, learning analytics, personalized education, and administrative efficiency from leading experts worldwide.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1725618878496-233974f2fd59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcm5hdGlvbmFsJTIwc3R1ZGVudHMlMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc2MDU4OTg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -207,7 +207,7 @@ export function UpcomingEvents() {
       type: "Fair",
       participants: "500+ Expected",
       description:
-        "✈️ YOUR GLOBAL JOURNEY STARTS HERE! 🎓 Meet representatives from partner universities, learn about exchange programs, scholarships, and study abroad opportunities. Get personalized guidance on international education pathways.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -220,7 +220,7 @@ export function UpcomingEvents() {
       type: "Summit",
       participants: "250+ Expected",
       description:
-        "🌱 BUILDING SUSTAINABLE CAMPUSES! 🌍 Join the movement towards environmentally sustainable universities. Share best practices in campus sustainability, renewable energy, waste management, and green building initiatives.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwbGVjdHVyZSUyMGhhbGx8ZW58MXx8fHwxNzYwNTE5MjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -233,7 +233,7 @@ export function UpcomingEvents() {
       type: "Workshop",
       participants: "120+ Expected",
       description:
-        "📊 DATA-DRIVEN INSIGHTS! 🔬 Learn to apply data science methods to social science research. Master statistical analysis, data visualization, and machine learning techniques for social research applications.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMGNvbmZlcmVuY2V8ZW58MXx8fHwxNzYwNTg5ODc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -246,7 +246,7 @@ export function UpcomingEvents() {
       type: "Networking",
       participants: "200+ Expected",
       description:
-        "🎉 RECONNECT & COLLABORATE! 🤝 Join fellow GIS program alumni from around the world. Share experiences, build professional networks, explore collaboration opportunities, and celebrate our global community's achievements.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYwNTIwNzc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
   ];
@@ -344,7 +344,7 @@ export function UpcomingEvents() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-xl text-white/90"
           >
-            Join us in our upcoming international programs and activities
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           </motion.p>
         </div>
       </section>

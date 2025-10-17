@@ -63,7 +63,7 @@ export function PreviousEvents() {
       type: "Summit",
       participants: "350+ Participants",
       description:
-        "🎓 A landmark summit that brought together education leaders from 15 countries to discuss the future of higher education in the Asia-Pacific region. The event featured inspiring keynote speeches, panel discussions, and networking sessions that fostered meaningful connections among participants.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -75,7 +75,7 @@ export function PreviousEvents() {
       type: "Workshop",
       participants: "120+ Participants",
       description:
-        "📚 Three-day intensive workshop focused on building research partnerships and developing joint research proposals among member universities. Participants engaged in hands-on activities, collaborative sessions, and learned best practices for international research collaboration.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -87,7 +87,7 @@ export function PreviousEvents() {
       type: "Webinar",
       participants: "600+ Participants",
       description:
-        "💻 A highly successful webinar exploring how universities can leverage technology to enhance teaching and learning outcomes in the digital age. Featured expert presentations on educational technology, interactive discussions, and practical implementation strategies.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMGNvbmZlcmVuY2V8ZW58MXx8fHwxNzYwNTg5ODc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -99,7 +99,7 @@ export function PreviousEvents() {
       type: "Forum",
       participants: "200+ Students",
       description:
-        "✨ An inspiring forum where students from member universities came together to develop leadership skills and discuss global challenges. Students participated in workshops, cultural exchanges, and collaborative projects focused on sustainable development.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -111,7 +111,7 @@ export function PreviousEvents() {
       type: "Conference",
       participants: "400+ Participants",
       description:
-        "🌟 The flagship annual conference featuring keynote speeches, panel discussions, and networking opportunities for academics and administrators. Celebrated achievements, discussed future directions, and strengthened partnerships among member institutions.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwbGVjdHVyZSUyMGhhbGx8ZW58MXx8fHwxNzYwNTE5MjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -123,7 +123,7 @@ export function PreviousEvents() {
       type: "Orientation",
       participants: "80+ Faculty",
       description:
-        "🤝 Launch event for the faculty exchange program, connecting professors from different institutions for collaborative teaching opportunities. Faculty members learned about program logistics, shared experiences, and planned future collaborations.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYwNTIwNzc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -135,7 +135,7 @@ export function PreviousEvents() {
       type: "Symposium",
       participants: "250+ Participants",
       description:
-        "🌍 A symposium dedicated to exploring how universities can contribute to achieving the UN Sustainable Development Goals through research and education. Featured presentations on sustainability initiatives, research collaborations, and community engagement.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1725618878496-233974f2fd59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcm5hdGlvbmFsJTIwc3R1ZGVudHMlMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc2MDU4OTg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -147,7 +147,7 @@ export function PreviousEvents() {
       type: "Workshop",
       participants: "100+ Participants",
       description:
-        "📊 Comprehensive workshop on best practices in quality assurance, accreditation, and continuous improvement in higher education. Participants gained valuable insights into QA frameworks, assessment methods, and institutional effectiveness strategies.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjA1MjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -159,7 +159,7 @@ export function PreviousEvents() {
       type: "Seminar",
       participants: "180+ Participants",
       description:
-        "💡 An engaging seminar on fostering innovation and entrepreneurial mindset in higher education. Explored strategies for university-industry collaboration, startup incubation, and commercialization of academic research.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -171,7 +171,7 @@ export function PreviousEvents() {
       type: "Conference",
       participants: "300+ Participants",
       description:
-        "🏥 A pivotal conference addressing global health challenges in the post-pandemic era. Featured presentations on public health policy, healthcare innovation, and international health cooperation from leading experts.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -183,7 +183,7 @@ export function PreviousEvents() {
       type: "Workshop",
       participants: "150+ Participants",
       description:
-        "📚 Workshop on creating and utilizing open educational resources (OER) to enhance teaching and learning. Participants learned about OER licensing, repository management, and collaborative content development.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMGNvbmZlcmVuY2V8ZW58MXx8fHwxNzYwNTg5ODc3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -195,7 +195,7 @@ export function PreviousEvents() {
       type: "Summit",
       participants: "280+ Participants",
       description:
-        "🌍 Universities united to address climate change through research, education, and campus operations. Shared innovative practices in carbon neutrality, climate research, and sustainability education.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -207,7 +207,7 @@ export function PreviousEvents() {
       type: "Training",
       participants: "70+ Participants",
       description:
-        "👔 Leadership development program for academic administrators and department heads. Covered strategic planning, change management, conflict resolution, and effective academic governance.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwbGVjdHVyZSUyMGhhbGx8ZW58MXx8fHwxNzYwNTE5MjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -219,7 +219,7 @@ export function PreviousEvents() {
       type: "Showcase",
       participants: "220+ Participants",
       description:
-        "🥽 Explored the potential of virtual and augmented reality in education. Showcased innovative VR/AR applications in various disciplines, from medical education to virtual field trips.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYwNTIwNzc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -231,7 +231,7 @@ export function PreviousEvents() {
       type: "Symposium",
       participants: "160+ PhD Students",
       description:
-        "🎓 PhD students from member universities presented their research and received feedback from senior researchers. Included workshops on thesis writing, publication strategies, and career development.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1725618878496-233974f2fd59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcm5hdGlvbmFsJTIwc3R1ZGVudHMlMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc2MDU4OTg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -243,7 +243,7 @@ export function PreviousEvents() {
       type: "Forum",
       participants: "190+ Participants",
       description:
-        "🔐 Critical discussions on protecting university data, infrastructure, and research from cyber threats. Shared best practices in cybersecurity policies, incident response, and security awareness training.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
@@ -255,7 +255,7 @@ export function PreviousEvents() {
       type: "Launch Event",
       participants: "120+ Participants",
       description:
-        "🗣️ Celebrated the launch of a new language and cultural exchange program connecting students across partner universities. Featured cultural performances, language showcases, and program orientation.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
       poster: "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
   ];
@@ -353,7 +353,7 @@ export function PreviousEvents() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-xl text-white/90"
           >
-            Celebrating our successful programs and collaborations
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           </motion.p>
         </div>
       </section>

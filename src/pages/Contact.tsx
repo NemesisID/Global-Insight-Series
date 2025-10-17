@@ -80,7 +80,7 @@ export function Contact() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-xl text-white/90"
           >
-            We'd love to hear from you. Get in touch with our team.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </motion.p>
         </div>
       </section>
