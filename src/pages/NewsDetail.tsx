@@ -31,37 +31,37 @@ export function NewsDetail({ onNavigate, article }: NewsDetailProps) {
 
   // Extended content for full article
   const fullArticleContent = {
-    introduction: `The Global Insight Series continues to strengthen international academic collaboration through innovative programs and strategic partnerships. This initiative has brought together universities from across the globe to share knowledge, foster research cooperation, and create meaningful opportunities for students and faculty alike.`,
+    introduction: `lorem ipsum dolor sit amet consectetur adipisicing elit. The Global Insight Series (GIS) stands as a testament to the power of international collaboration in higher education. Since its inception, GIS has been dedicated to fostering partnerships among universities across the globe, promoting student mobility, and enhancing research collaboration. This article delves into the multifaceted impact of GIS on academic institutions, students, and the broader educational landscape.`,
     
     sections: [
       {
-        heading: "Building Global Networks Through Academic Excellence",
-        content: `Our commitment to fostering international collaboration has led to the establishment of partnerships with over 25 leading universities worldwide. These partnerships enable joint research projects, student exchange programs, and collaborative teaching initiatives that enrich the academic experience for all participants. Through regular symposiums, workshops, and conferences, we create platforms for knowledge exchange and innovation that transcend geographical boundaries.`,
+        heading: "lorem ipsum dolor sit amet consectetur adipisicing elit",
+        content: `lorem ipsum dolor sit amet consectetur adipisicing elit. At the core of GIS's mission is the establishment of robust partnerships between member universities. These collaborations facilitate the exchange of knowledge, resources, and best practices, ultimately enriching the academic environment for all stakeholders involved. Through joint degree programs, faculty exchanges, and collaborative research projects, GIS has successfully created a dynamic network that transcends geographical boundaries.`,
         image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=600&fit=crop",
       },
       {
-        heading: "Empowering Students Through International Experience",
-        content: `Student mobility is at the heart of our mission. The exchange programs facilitated through GIS provide students with invaluable opportunities to study abroad, experience different cultures, and develop global perspectives that are essential in today's interconnected world. Our comprehensive support system ensures that students receive guidance throughout their exchange journey, from application to successful completion of their programs. We have witnessed remarkable transformations as students return with enhanced intercultural competencies, language skills, and professional networks that benefit them throughout their careers.`,
+        heading: "lorem ipsum dolor sit amet consectetur adipisicing elit",
+        content: `lorem ipsum dolor sit amet consectetur adipisicing elit. One of the most significant contributions of GIS is its emphasis on student mobility. By providing students with opportunities to study abroad at partner institutions, GIS not only broadens their academic horizons but also fosters cultural understanding and global citizenship. Exchange programs, summer schools, and international internships are just a few of the avenues through which students can immerse themselves in diverse educational settings, gaining invaluable experiences that shape their personal and professional growth.`,
         image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&h=600&fit=crop",
       },
       {
-        heading: "Research Collaboration and Innovation",
-        content: `Joint research initiatives among member universities have produced groundbreaking findings across various disciplines. Our collaborative research framework encourages interdisciplinary approaches, pooling expertise and resources to address complex global challenges. From sustainable development to technological innovation, our research teams are making significant contributions to academic knowledge and practical solutions. The establishment of research clusters and working groups has facilitated ongoing dialogue and cooperation among scholars worldwide.`,
+        heading: "lorem ipsum dolor sit amet consectetur adipisicing elit",
+        content: `lorem ipsum dolor sit amet consectetur adipisicing elit. Beyond student mobility, GIS places a strong emphasis on research collaboration. By connecting researchers from different institutions and disciplines, GIS fosters an environment conducive to innovation and knowledge creation. Collaborative research initiatives address global challenges, from climate change to public health, leveraging the diverse expertise of its member universities. Through conferences, workshops, and joint publications, GIS facilitates the dissemination of research findings to a broader audience, amplifying their impact.`,
         image: "https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=1200&h=600&fit=crop",
       },
       {
-        heading: "Faculty Development and Professional Growth",
-        content: `Recognizing that educators are key drivers of quality education, GIS invests significantly in faculty development programs. These initiatives provide opportunities for teaching staff to enhance their pedagogical skills, learn innovative teaching methodologies, and engage with international colleagues. Workshops, training sessions, and exchange programs for faculty members ensure continuous professional development and the sharing of best practices across institutions. This investment in human capital strengthens the overall quality of education delivered across our network.`,
+        heading: "lorem ipsum dolor sit amet consectetur adipisicing elit",
+        content: `lorem ipsum dolor sit amet consectetur adipisicing elit. The impact of GIS extends beyond the academic realm, influencing policy development and institutional strategies. By advocating for internationalization in higher education, GIS encourages universities to adopt global perspectives in their curricula, research agendas, and community engagement efforts. This shift not only enhances the quality of education but also prepares students to thrive in an interconnected world. Furthermore, GIS's commitment to inclusivity and diversity ensures that opportunities for international collaboration are accessible to a wide range of students and scholars.`,
         image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=600&fit=crop",
       },
       {
-        heading: "Looking Ahead: Future Initiatives and Expansion",
-        content: `As we look to the future, GIS remains committed to expanding its reach and deepening its impact. Plans are underway to launch new joint degree programs, establish virtual exchange opportunities, and develop innovative platforms for online collaboration. We are also exploring partnerships with industry leaders to provide students with internship opportunities and practical learning experiences. Our vision is to create a truly global academic community where borders become bridges and collaboration becomes the norm. Through continued dedication to excellence and innovation, we aim to set new standards for international academic cooperation.`,
+        heading: "lorem ipsum dolor sit amet consectetur adipisicing elit",
+        content: `lorem ipsum dolor sit amet consectetur adipisicing elit. In conclusion, the Global Insight Series has made significant strides in advancing international collaboration in higher education. Through its focus on partnerships, student mobility, and research excellence, GIS has created a vibrant network that enriches the academic experience for students and faculty alike. As the world continues to evolve, the role of GIS in shaping the future of higher education remains pivotal, fostering a culture of collaboration, innovation, and global citizenship.`,
         image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&h=600&fit=crop",
       },
     ],
     
-    conclusion: `The Global Insight Series represents more than just partnerships between institutions; it embodies a shared commitment to advancing education, fostering understanding, and preparing the next generation of global citizens. Together, we are building a future where knowledge knows no boundaries and collaboration creates limitless possibilities for learning and growth.`,
+    conclusion: `lorem ipsum dolor sit amet consectetur adipisicing elit. The Global Insight Series continues to be a beacon of international collaboration, driving positive change in higher education worldwide.`,
   };
 
   return (
