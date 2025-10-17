@@ -41,10 +41,14 @@ function CountUp({ end, duration = 2 }: { end: number; duration?: number }) {
 
 function TypingAnimationTitle() {
   const phrases = [
-    { text: "Let's Join Us!", lang: "en" },
-    { text: "Mari Bergabung!", lang: "id" },
-    { text: "Join Our Network!", lang: "en" },
-    { text: "Ayo Bersama!", lang: "id" },
+    { text: "Let's Join Us", lang: "en" },
+    { text: "Ayo Bergabung Dengan Kami", lang: "id" },
+    { text: "انضم إلينا", lang: "ye" },
+    { text: "ご参加ください", lang: "jp" },
+    { text: "함께해요", lang: "kr" },
+    { text: "Halina't sumali sa amin", lang: "ph" },
+    { text: "Únete a nosotros", lang: "co" },
+    { text: "Jom sertai kami", lang: "my" }
   ];
   const [currentPhrase, setCurrentPhrase] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -360,7 +364,6 @@ export function Home({ onNavigate }: HomeProps) {
                       />
                       <motion.div
                         className="relative w-20 h-20 mx-auto bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow"
-                        whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
                         <Users className="w-10 h-10 text-white" />
@@ -407,7 +410,6 @@ export function Home({ onNavigate }: HomeProps) {
                       />
                       <motion.div
                         className="relative w-20 h-20 mx-auto bg-gradient-to-br from-[var(--gold)] to-[var(--bronze)] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow"
-                        whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
                         <TrendingUp className="w-10 h-10 text-white" />
@@ -454,7 +456,6 @@ export function Home({ onNavigate }: HomeProps) {
                       />
                       <motion.div
                         className="relative w-20 h-20 mx-auto bg-gradient-to-br from-[var(--olive-green)] to-[var(--forest-green)] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow"
-                        whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
                         <Award className="w-10 h-10 text-white" />
