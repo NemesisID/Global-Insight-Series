@@ -487,13 +487,6 @@ export function PreviousEvents() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                       </motion.div>
-                      
-                      {/* "Poster" watermark overlay */}
-                      <div className="absolute top-4 right-4 z-10">
-                        <Badge className="bg-[var(--bronze)] text-white border-0 shadow-lg">
-                          Event Poster
-                        </Badge>
-                      </div>
                     </div>
                   </div>
                 </motion.div>

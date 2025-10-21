@@ -55,17 +55,18 @@ export function UpcomingEvents() {
 
   const allEvents = [
     {
-      title: "International Research Symposium 2025",
-      date: "November 15-17, 2025",
-      day: "15",
-      month: "NOV",
-      time: "09:00 - 17:00 WIB",
-      location: "UPN Veteran Jawa Timur, Surabaya",
-      type: "Conference",
-      participants: "200+ Expected",
+      title: "THE ROLE OF CHEMICAL ENGINEERING",
+      date: "October 24, 2025",
+      day: "24",
+      month: "October",
+      time: "14:00 - 15:30 WIB",
+      location: "Zoom Meeting",
+      type: "Webinar",
+      participants: "-",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla natus dolore qui? Maxime nulla explicabo, beatae tenetur aut culpa error. Temporibus quos, quod, enim iure dolore quae hic vero cum dolores natus recusandae a molestias ab nisi cupiditate quaerat assumenda.",
-      poster: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwbGVjdHVyZSUyMGhhbGx8ZW58MXx8fHwxNzYwNTE5MjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+        `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #001" with the theme "The Role of Chemical Engineering" on October 24, 2025, from 14.00 to 15.30 (Western Indonesia Time) via Zoom Meeting. This event, which aims to build a multinational knowledge-sharing community, will feature two speakers: Ika Nawang Puspitarum, M.T. from UPN "Veteran" Jawa Timur and Dr. Ibrahim Hamdoon, a Chemistry Expert from Jeddah, Saudi Arabia. The webinar invites students, researchers, and academics to discuss and collaborate within an international academic community.`,
+      registrationLink: "https://bit.ly/gis001october",
+      poster: "assets/event/event1.png",
     },
     // {
     //   title: "Global Leadership in Education Webinar Series",
@@ -660,14 +661,17 @@ export function UpcomingEvents() {
                         {event.description}
                       </p>
 
-                      <motion.button
-                        className="bg-gradient-to-r from-[var(--forest-green)] to-[var(--olive-green)] text-white px-8 py-3 rounded-full hover:shadow-lg transition-all flex items-center"
+                      <motion.a
+                        href={event.registrationLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center bg-gradient-to-r from-[var(--forest-green)] to-[var(--olive-green)] text-white px-8 py-3 rounded-full hover:shadow-lg transition-all"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
                         Register Now
                         <Sparkles className="w-4 h-4 ml-2" />
-                      </motion.button>
+                      </motion.a>
                     </div>
 
                     {/* Event Poster - Right */}
@@ -684,13 +688,6 @@ export function UpcomingEvents() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                       </motion.div>
-                      
-                      {/* "Poster" watermark overlay */}
-                      <div className="absolute top-4 right-4 z-10">
-                        <Badge className="bg-[var(--gold)] text-white border-0 shadow-lg">
-                          Event Poster
-                        </Badge>
-                      </div>
                     </div>
                   </div>
                 </motion.div>
