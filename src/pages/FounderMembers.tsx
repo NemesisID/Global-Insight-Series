@@ -26,21 +26,17 @@ function AnimatedSection({
 }
 
 export function FounderMembers() {
-  const foundingUniversities = [
-    "Lorem ipsum dolor sit.",
-    "Lorem ipsum dolor sit.",
-    "Lorem ipsum dolor sit.",
-  ];
+
 
   const memberUniversities = [
-    "Lorem ipsum dolor sit.",
-    "Lorem ipsum dolor sit.",
-    "Lorem ipsum dolor sit.",
-    "Lorem ipsum dolor sit.",
-    "Lorem ipsum dolor sit.",
-    "Lorem ipsum dolor sit.",
-    "Lorem ipsum dolor sit.",
-    "Lorem ipsum dolor sit.",
+    "Anna University",
+    "Nitiama (MUKA)",
+    "Uva Wellassa University of Sri Lanka: Dr. A. A. G. D. Amarasooriya",
+    "Dr. Most Tanziman Ara, Stamford University Bangladesh",
+    "Dr. Suhailee Sohnui (Dosen Department of Oriental Languages, Faculty of Humanities, Chiang Mai University, Thailand)",
+    "Dr. Rattanaporn Muhry (Dosen Sarasas Suvarnabhumi Institute of Technology dan President Assistant at Sarasas Affiliated School, Bangkok, Thailand)",
+    "Ms. Supapat Watcharasawat, head of staff for IAO, Prince of Songkla University",
+    "Ms. Sasimaporn, IAO officer, Prince of Songkla University",
   ];
 
   return (
@@ -54,7 +50,7 @@ export function FounderMembers() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl mb-6"
           >
-            Founder & Members
+            Members
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -68,7 +64,7 @@ export function FounderMembers() {
       </section>
 
       {/* Founding Universities Section */}
-      <AnimatedSection>
+      {/* <AnimatedSection>
         <section className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -101,7 +97,7 @@ export function FounderMembers() {
             </div>
           </div>
         </section>
-      </AnimatedSection>
+      </AnimatedSection> */}
 
       {/* Member Universities Section */}
       <AnimatedSection>

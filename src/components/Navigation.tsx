@@ -23,8 +23,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
   const aboutLinks = [
     { label: "About GIS", page: "about-gis" },
     { label: "Vision & Mission", page: "vision-mission" },
-    { label: "Structure", page: "structure" },
-    { label: "Founder & Members", page: "founder-members" },
+    { label: "Members", page: "founder-members" },
   ];
 
   const eventLinks = [
