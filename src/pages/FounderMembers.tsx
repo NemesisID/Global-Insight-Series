@@ -27,34 +27,20 @@ function AnimatedSection({
 
 export function FounderMembers() {
   const foundingUniversities = [
-    "UPN Veteran Jawa Timur, Indonesia",
-    "National University of Singapore",
-    "University of Malaya, Malaysia",
-    "Chulalongkorn University, Thailand",
-    "Vietnam National University",
+    "Lorem ipsum dolor sit.",
+    "Lorem ipsum dolor sit.",
+    "Lorem ipsum dolor sit.",
   ];
 
   const memberUniversities = [
-    "Universitas Indonesia",
-    "Universitas Gadjah Mada",
-    "Institut Teknologi Bandung",
-    "Universitas Airlangga",
-    "Chiang Mai University, Thailand",
-    "Mahidol University, Thailand",
-    "University of the Philippines",
-    "De La Salle University, Philippines",
-    "Nanyang Technological University, Singapore",
-    "University of Brunei Darussalam",
-    "Royal University of Phnom Penh, Cambodia",
-    "National University of Laos",
-    "Yangon University, Myanmar",
-    "Seoul National University, South Korea",
-    "Kyoto University, Japan",
-    "Peking University, China",
-    "University of Melbourne, Australia",
-    "University of Auckland, New Zealand",
-    "University of Cambridge, UK",
-    "Ludwig Maximilian University, Germany",
+    "Lorem ipsum dolor sit.",
+    "Lorem ipsum dolor sit.",
+    "Lorem ipsum dolor sit.",
+    "Lorem ipsum dolor sit.",
+    "Lorem ipsum dolor sit.",
+    "Lorem ipsum dolor sit.",
+    "Lorem ipsum dolor sit.",
+    "Lorem ipsum dolor sit.",
   ];
 
   return (

@@ -75,15 +75,12 @@ export function AboutGIS() {
                 >
                   <motion.span
                     className="text-7xl text-white"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
                   >
                     <img src="assets/logo.png" alt="logo" />
                   </motion.span>
                 </motion.div>
                 <motion.div
                   className="absolute -top-4 -right-4"
-                  animate={{ rotate: 360 }}
                   transition={{
                     duration: 20,
                     repeat: Infinity,
