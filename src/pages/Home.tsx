@@ -886,46 +886,46 @@ export function Home({ onNavigate }: HomeProps) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {[
-                {
-                  title: "GIS International Summit 2025 Successfully Concluded",
-                  date: "October 15, 2025",
-                  category: "Event Highlights",
-                  categoryColor: "bg-[var(--forest-green)]",
-                  image:
-                    "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
-                  excerpt:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-                },
-                {
-                  title: "New Strategic Partnership with Leading Universities",
-                  date: "October 12, 2025",
-                  category: "Partnership",
-                  categoryColor: "bg-blue-600",
-                  image:
-                    "https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjA1MjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-                  excerpt:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-                },
-                {
-                  title: "Breakthrough Research on Climate Published",
-                  date: "October 10, 2025",
-                  category: "Research",
-                  categoryColor: "bg-[var(--gold)]",
-                  image:
-                    "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-                  excerpt:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-                },
-                {
-                  title: "Student Exchange Program Milestone Reached",
-                  date: "October 8, 2025",
-                  category: "Student Programs",
-                  categoryColor: "bg-purple-600",
-                  image:
-                    "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-                  excerpt:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-                },
+                // {
+                //   title: "GIS International Summit 2025 Successfully Concluded",
+                //   date: "October 15, 2025",
+                //   category: "Event Highlights",
+                //   categoryColor: "bg-[var(--forest-green)]",
+                //   image:
+                //     "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+                //   excerpt:
+                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
+                // },
+                // {
+                //   title: "New Strategic Partnership with Leading Universities",
+                //   date: "October 12, 2025",
+                //   category: "Partnership",
+                //   categoryColor: "bg-blue-600",
+                //   image:
+                //     "https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjA1MjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+                //   excerpt:
+                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
+                // },
+                // {
+                //   title: "Breakthrough Research on Climate Published",
+                //   date: "October 10, 2025",
+                //   category: "Research",
+                //   categoryColor: "bg-[var(--gold)]",
+                //   image:
+                //     "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+                //   excerpt:
+                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
+                // },
+                // {
+                //   title: "Student Exchange Program Milestone Reached",
+                //   date: "October 8, 2025",
+                //   category: "Student Programs",
+                //   categoryColor: "bg-purple-600",
+                //   image:
+                //     "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+                //   excerpt:
+                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
+                // },
               ].map((news, index) => (
                 <motion.div
                   key={index}
@@ -1029,13 +1029,7 @@ export function Home({ onNavigate }: HomeProps) {
               className="space-y-4 mb-12"
             >
               <p className="text-2xl md:text-3xl text-white/90">
-                To build a global network.
-              </p>
-                <p className="text-2xl md:text-3xl text-white/90">
-                To collaborate internationally.
-                </p>
-              <p className="text-2xl md:text-3xl text-white/90">
-                To create a better future.
+                GIS are open to global collaborators universities, research institutions, NGOs, and public or private organizations committed to advancing community-centered development.
               </p>
             </motion.div>
 
