@@ -26,16 +26,39 @@ function AnimatedSection({
 }
 
 export function FounderMembers() {
-
-
   const memberUniversities = [
-    "Anna University",
-    "Mahidol University",
-    "Uva Wellassa University of Sri Lanka",
-    "Stamford University Bangladesh",
-    "Chiang Mai University",
-    "Sarasas Affiliated School",
-    "Prince of Songkla University",
+    {
+      name: "Universitas Pembangunan Nasional 'Veteran' Jawa Timur",
+      website: "https://www.upnjatim.ac.id/",
+    },
+    {
+      name: "Anna University",
+      website: "https://www.annauniv.edu/",
+    },
+    {
+      name: "Mahidol University",
+      website: "https://mahidol.ac.th/",
+    },
+    {
+      name: "Uva Wellassa University of Sri Lanka",
+      website: "https://www.uwu.ac.lk/",
+    },
+    {
+      name: "Stamford University Bangladesh",
+      website: "https://www.stamforduniversity.edu.bd/",
+    },
+    {
+      name: "Chiang Mai University",
+      website: "https://www.cmu.ac.th/",
+    },
+    {
+      name: "Sarasas Affiliated School",
+      website: "",
+    },
+    {
+      name: "Prince of Songkla University",
+      website: "https://www.psu.ac.th/",
+    },
   ];
 
   return (
@@ -107,22 +130,24 @@ export function FounderMembers() {
             <motion.div
               className="absolute top-20 right-10 w-[400px] h-[400px] rounded-full"
               style={{
-                background: "radial-gradient(circle, rgba(45, 80, 22, 0.12) 0%, rgba(45, 80, 22, 0.05) 50%, transparent 70%)",
+                background:
+                  "radial-gradient(circle, rgba(45, 80, 22, 0.12) 0%, rgba(45, 80, 22, 0.05) 50%, transparent 70%)",
               }}
-              animate={{ 
+              animate={{
                 x: [0, 60, 0],
                 y: [0, 40, 0],
                 scale: [1, 1.15, 1],
               }}
               transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
             />
-            
+
             <motion.div
               className="absolute bottom-20 left-10 w-[450px] h-[450px] rounded-full"
               style={{
-                background: "radial-gradient(circle, rgba(201, 169, 97, 0.15) 0%, rgba(201, 169, 97, 0.07) 50%, transparent 70%)",
+                background:
+                  "radial-gradient(circle, rgba(201, 169, 97, 0.15) 0%, rgba(201, 169, 97, 0.07) 50%, transparent 70%)",
               }}
-              animate={{ 
+              animate={{
                 x: [0, -50, 0],
                 y: [0, -60, 0],
                 scale: [1, 1.2, 1],
@@ -136,11 +161,11 @@ export function FounderMembers() {
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
             />
-            
+
             <motion.div
               className="absolute bottom-32 right-32 w-24 h-24 border-2 border-[var(--gold)]/25"
               style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
-              animate={{ 
+              animate={{
                 rotate: [0, -360],
                 borderRadius: [
                   "30% 70% 70% 30% / 30% 30% 70% 70%",
@@ -160,12 +185,12 @@ export function FounderMembers() {
                   left: `${5 + (i % 4) * 25}%`,
                   top: `${10 + Math.floor(i / 4) * 30}%`,
                 }}
-                animate={{ 
+                animate={{
                   y: [0, -20, 0],
                   rotate: [0, 10, -10, 0],
                   opacity: [0.05, 0.15, 0.05],
                 }}
-                transition={{ 
+                transition={{
                   duration: 4 + (i % 3),
                   repeat: Infinity,
                   delay: i * 0.3,
@@ -185,11 +210,11 @@ export function FounderMembers() {
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                   }}
-                  animate={{ 
+                  animate={{
                     scale: [1, 1.8, 1],
                     opacity: [0.2, 0.6, 0.2],
                   }}
-                  transition={{ 
+                  transition={{
                     duration: 3 + Math.random() * 2,
                     repeat: Infinity,
                     delay: Math.random() * 2,
@@ -210,7 +235,11 @@ export function FounderMembers() {
                 fill="none"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               />
               <motion.path
                 d="M 200 300 Q 400 400 600 300 T 1000 300"
@@ -219,7 +248,12 @@ export function FounderMembers() {
                 fill="none"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                transition={{
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5,
+                }}
               />
             </svg>
           </div>
@@ -236,7 +270,11 @@ export function FounderMembers() {
               >
                 <motion.div
                   className="w-20 h-20 bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)] rounded-2xl flex items-center justify-center shadow-2xl mx-auto relative"
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
                 >
                   <motion.div
                     className="absolute inset-0 bg-white/20 rounded-2xl"
@@ -246,16 +284,17 @@ export function FounderMembers() {
                   <GraduationCap className="w-10 h-10 text-white relative z-10" />
                 </motion.div>
               </motion.div>
-              
+
               <h2 className="text-4xl text-[var(--forest-green)] mb-4">
                 Member Universities
               </h2>
               <div className="h-1 w-24 bg-gradient-to-r from-[var(--forest-green)] to-[var(--gold)] rounded-full mx-auto mb-4" />
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Distinguished institutions collaborating through Global Insight Series
+                Distinguished institutions collaborating through Global Insight
+                Series
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {memberUniversities.map((university, index) => (
                 <motion.div
@@ -265,30 +304,39 @@ export function FounderMembers() {
                   transition={{ delay: (index % 8) * 0.05 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -8, scale: 1.02 }}
-                  className="group"
+                  className="group h-full"
                 >
-                  <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col items-center justify-center text-center border border-white/50 relative overflow-hidden">
-                    {/* Decorative gradient on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--forest-green)]/0 to-[var(--gold)]/0 group-hover:from-[var(--forest-green)]/5 group-hover:to-[var(--gold)]/5 transition-all duration-300 rounded-xl" />
-                    
-                    {/* Top accent line */}
-                    <motion.div
-                      className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--forest-green)] via-[var(--olive-green)] to-[var(--gold)]"
-                      initial={{ scaleX: 0 }}
-                      whileInView={{ scaleX: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: (index % 8) * 0.05 + 0.2 }}
-                    />
-                    
-                    <motion.div
-                      className="w-16 h-16 bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)] rounded-2xl flex items-center justify-center mb-3 shadow-lg relative z-10 group-hover:shadow-xl group-hover:scale-110 transition-all"
-                      transition={{ duration: 0.6 }}
-                    >
-                      <GraduationCap className="w-8 h-8 text-white" />
-                    </motion.div>
-                    
-                    <p className="text-sm text-gray-700 relative z-10 group-hover:text-[var(--forest-green)] transition-colors">{university}</p>
-                  </div>
+                  <a
+                    href={university.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
+                  >
+                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full min-h-[180px] flex flex-col items-center justify-center text-center border border-white/50 relative overflow-hidden cursor-pointer">
+                      {/* Decorative gradient on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-[var(--forest-green)]/0 to-[var(--gold)]/0 group-hover:from-[var(--forest-green)]/5 group-hover:to-[var(--gold)]/5 transition-all duration-300 rounded-xl" />
+
+                      {/* Top accent line */}
+                      <motion.div
+                        className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--forest-green)] via-[var(--olive-green)] to-[var(--gold)]"
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: (index % 8) * 0.05 + 0.2 }}
+                      />
+
+                      <motion.div
+                        className="w-16 h-16 bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)] rounded-2xl flex items-center justify-center mb-3 shadow-lg relative z-10 group-hover:shadow-xl group-hover:scale-110 transition-all flex-shrink-0"
+                        transition={{ duration: 0.6 }}
+                      >
+                        <GraduationCap className="w-8 h-8 text-white" />
+                      </motion.div>
+
+                      <p className="text-sm text-gray-700 relative z-10 group-hover:text-[var(--forest-green)] transition-colors line-clamp-3">
+                        {university.name}
+                      </p>
+                    </div>
+                  </a>
                 </motion.div>
               ))}
             </div>
