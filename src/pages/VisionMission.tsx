@@ -28,16 +28,6 @@ function AnimatedSection({
 }
 
 export function VisionMission() {
-  const missions = [
-    "Foster sustainable partnerships among universities worldwide to enhance academic excellence and research capabilities",
-    "Facilitate knowledge exchange through international conferences, webinars, and collaborative research initiatives",
-    "Promote cross-cultural understanding and global citizenship among students, faculty, and researchers",
-    "Create opportunities for international academic mobility and exchange programs",
-    "Support joint research projects addressing global challenges and sustainable development goals",
-    "Enhance institutional capacity and international visibility of member universities",
-    "Build a vibrant community of scholars committed to collaborative innovation and excellence",
-  ];
-
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -89,7 +79,9 @@ export function VisionMission() {
                       </h2>
                     </div>
                     <p className="text-gray-700 leading-relaxed text-lg">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias inventore illum beatae maiores magni nulla nemo sit tempora ipsam, sint eius, dignissimos quos labore. Eveniet non consequatur doloremque, eius accusantium accusamus veniam tempora, itaque molestiae suscipit nesciunt error maiores et impedit? Atque ipsum dolore ex.
+                      To become a leading global forum that bridges knowledge,
+                      culture, and innovation for sustainable
+                      community development.
                     </p>
                   </motion.div>
                 </GlowingCard>
@@ -298,17 +290,33 @@ export function VisionMission() {
                       </h2>
                     </div>
                     <div className="space-y-6 text-gray-700 leading-relaxed">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
-                      </p>
+                      <ul className="space-y-4">
+                        {[
+                          "Facilitate Global Knowledge Exchange — Create regular forums through the Global Insight Series that promote interdisciplinary discussion on pressing global and local issues.",
+                          "Build Collaborative Networks — Connect universities, researchers, and community organizations to co-develop impactful initiatives.",
+                          "Transform Insights into Action — Encourage participants to translate discussions into community-based projects and sustainable programs.",
+                          "Promote Cultural Understanding — Celebrate the diversity of global perspectives as a source of strength in achieving shared goals.",
+                          "Empower Academic Leadership — Position universities as key actors in shaping inclusive and innovative solutions for society.",
+                        ].map((item, index) => (
+                          <motion.li
+                            key={index}
+                            className="flex items-start group"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                          >
+                            <motion.div
+                              className="w-3 h-3 bg-gradient-to-br from-[var(--gold)] to-[var(--bronze)] rounded-lg flex items-center justify-center mr-3 mt-2 flex-shrink-0"
+                              whileHover={{ scale: 1.2, rotate: 90 }}
+                            >
+                            </motion.div>
+                            <span className="group-hover:text-[var(--gold)] transition-colors">
+                              {item}
+                            </span>
+                          </motion.li>
+                        ))}
+                      </ul>
                     </div>
                   </motion.div>
                 </GlowingCard>
