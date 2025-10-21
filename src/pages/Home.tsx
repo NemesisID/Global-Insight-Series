@@ -304,7 +304,7 @@ export function Home({ onNavigate }: HomeProps) {
                     </motion.div>
                     <p className="text-xl text-white/90">Video Not Found</p>
                     <p className="text-sm text-white/70 mt-2 px-4">
-                      Please add your video file to /public/videos/campaign.mp4
+                      Video failed to load. Please try again later.
                     </p>
                   </div>
                 </div>
