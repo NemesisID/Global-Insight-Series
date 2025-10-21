@@ -227,15 +227,12 @@ export function AboutGIS() {
                 <div className="flex items-center mb-8 relative">
                   <motion.div
                     className="w-14 h-14 bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)] rounded-2xl flex items-center justify-center mr-4 shadow-xl relative overflow-hidden"
-                    whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
                     <motion.div
                       className="absolute inset-0 bg-white/20"
-                      animate={{ rotate: 360 }}
                       transition={{
                         duration: 3,
-                        repeat: Infinity,
                         ease: "linear",
                       }}
                     />
@@ -263,172 +260,24 @@ export function AboutGIS() {
 
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    Multilateral Community Development (MCD) is an international
+                    initiative initiated by UPN “Veteran” Jawa Timur, dedicated to
+                    advancing global collaboration in community empowerment and
+                    sustainable transformation. At the heart of this movement lies
+                    the Global Insight Series (GIS) a flagship platform that brings
+                    together academics, practitioners, policymakers, and innovators
+                    from around the world to exchange ideas and share transformative
+                    insights.
                   </p>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque habitant morbi tristique senectus et netus et
-                    malesuada fames ac turpis egestas. Vestibulum tortor quam,
-                    feugiat vitae, ultricies eget, tempor sit amet, ante. Donec
-                    eu libero sit amet quam egestas semper. Aenean ultricies mi
-                    vitae est mauris placerat eleifend leo.
+                    Through GIS, MCD fosters intellectual dialogue and cross-sector
+                    collaboration to address contemporary challenges in areas such as
+                    social innovation, digital transformation, sustainability, and inclusive
+                    education. Each GIS event serves as a meeting point for global minds
+                    connecting local wisdom with international knowledge to inspire real,
+                    measurable impact on communities worldwide.
                   </p>
-
-                  {/* Our History Section with icon */}
-                  <div className="flex items-center mt-8 mb-4">
-                    <motion.div
-                      className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mr-3 shadow-lg"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <Globe className="w-5 h-5 text-white" />
-                    </motion.div>
-                    <h3 className="text-2xl text-[var(--forest-green)]">
-                      Our History
-                    </h3>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore.
-                  </p>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque habitant morbi tristique senectus et netus et
-                    malesuada fames ac turpis egestas. Vestibulum tortor quam,
-                    feugiat vitae, ultricies eget tempor sit amet ante donec eu
-                    libero.
-                  </p>
-
-                  {/* Our Purpose Section with icon */}
-                  <div className="flex items-center mt-8 mb-4">
-                    <motion.div
-                      className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center mr-3 shadow-lg"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <Users className="w-5 h-5 text-white" />
-                    </motion.div>
-                    <h3 className="text-2xl text-[var(--forest-green)]">
-                      Our Purpose
-                    </h3>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam:
-                  </p>
-
-                  {/* Enhanced bullet list with custom styling */}
-                  <ul className="space-y-3 my-6">
-                    {[
-                      "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod",
-                      "Tempor incididunt ut labore et dolore magna aliqua ut enim ad minim",
-                      "Veniam quis nostrud exercitation ullamco laboris nisi ut aliquip commodo",
-                      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
-                      "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia",
-                    ].map((item, index) => (
-                      <motion.li
-                        key={index}
-                        className="flex items-start group"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
-                      >
-                        <motion.div
-                          className="w-6 h-6 bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)] rounded-lg flex items-center justify-center mr-3 mt-0.5 flex-shrink-0"
-                          whileHover={{ scale: 1.2, rotate: 90 }}
-                        >
-                          <Sparkles className="w-3 h-3 text-white" />
-                        </motion.div>
-                        <span className="group-hover:text-[var(--forest-green)] transition-colors">
-                          {item}
-                        </span>
-                      </motion.li>
-                    ))}
-                  </ul>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque habitant morbi tristique senectus et netus et
-                    malesuada fames ac turpis egestas vestibulum tortor quam
-                    feugiat vitae ultricies.
-                  </p>
-
-                  {/* Why Join GIS Section with icon */}
-                  <div className="flex items-center mt-8 mb-4">
-                    <motion.div
-                      className="w-10 h-10 bg-gradient-to-br from-[var(--gold)] to-[var(--bronze)] rounded-xl flex items-center justify-center mr-3 shadow-lg"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <Sparkles className="w-5 h-5 text-white" />
-                    </motion.div>
-                    <h3 className="text-2xl text-[var(--forest-green)]">
-                      Why Join GIS?
-                    </h3>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat duis
-                    aute irure dolor.
-                  </p>
-
-                  <motion.p
-                    className="relative"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Pellentesque habitant morbi tristique senectus et netus et
-                    malesuada fames ac turpis egestas. Vestibulum tortor quam,
-                    feugiat vitae ultricies eget tempor sit amet ante.
-                  </motion.p>
-
-                  {/* Call to action highlight box */}
-                  <motion.div
-                    className="mt-8 p-6 bg-gradient-to-r from-[var(--forest-green)]/5 to-[var(--gold)]/5 rounded-2xl border-l-4 border-[var(--forest-green)]"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    <div className="flex items-start">
-                      <motion.div
-                        animate={{ rotate: [0, 10, -10, 0] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <Sparkles className="w-6 h-6 text-[var(--gold)] mr-3 flex-shrink-0 mt-1" />
-                      </motion.div>
-                      <div>
-                        <h4 className="text-lg text-[var(--forest-green)] mb-2">
-                          Ready to Join Our Global Network?
-                        </h4>
-                        <p className="text-gray-600 text-sm">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
                 </div>
               </div>
             </motion.div>
