@@ -644,7 +644,7 @@ export function Home({ onNavigate }: HomeProps) {
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
                     <div className="text-center">
-                      <div className="text-3xl text-white">5+</div>
+                      <div className="text-3xl text-white">1+</div>
                       <div className="text-xs text-white/90">Years</div>
                     </div>
                   </motion.div>

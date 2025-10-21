@@ -30,13 +30,12 @@ export function FounderMembers() {
 
   const memberUniversities = [
     "Anna University",
-    "Nitiama (MUKA)",
-    "Uva Wellassa University of Sri Lanka: Dr. A. A. G. D. Amarasooriya",
-    "Dr. Most Tanziman Ara, Stamford University Bangladesh",
-    "Dr. Suhailee Sohnui (Dosen Department of Oriental Languages, Faculty of Humanities, Chiang Mai University, Thailand)",
-    "Dr. Rattanaporn Muhry (Dosen Sarasas Suvarnabhumi Institute of Technology dan President Assistant at Sarasas Affiliated School, Bangkok, Thailand)",
-    "Ms. Supapat Watcharasawat, head of staff for IAO, Prince of Songkla University",
-    "Ms. Sasimaporn, IAO officer, Prince of Songkla University",
+    "Mahidol University",
+    "Uva Wellassa University of Sri Lanka",
+    "Stamford University Bangladesh",
+    "Chiang Mai University",
+    "Sarasas Affiliated School",
+    "Prince of Songkla University",
   ];
 
   return (

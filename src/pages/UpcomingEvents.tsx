@@ -669,7 +669,7 @@ export function UpcomingEvents() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        Register Now
+                        Join Now  
                         <Sparkles className="w-4 h-4 ml-2" />
                       </motion.a>
                     </div>
