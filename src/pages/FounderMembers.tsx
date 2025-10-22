@@ -340,7 +340,7 @@ export function FounderMembers() {
                         <img
                           src={university.logo}
                           alt={university.name}
-                          className="max-w-5 max-h-5 object-contain"
+                          className="max-w-5 h-full object-contain"
                         />
                       </motion.div>
 
