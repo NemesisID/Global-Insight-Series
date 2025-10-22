@@ -148,7 +148,7 @@ export function PreviousEvents() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-xl text-white/90"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Celebrating our successful programs and collaborations
           </motion.p>
         </div>
       </section>

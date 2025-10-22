@@ -669,20 +669,10 @@ export function Home({ onNavigate }: HomeProps) {
                   Who Are We?
                 </h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur.
+                  Global Insight Series (GIS) is an innovative international academic program initiated by UPN "Veteran" Jawa Timur. We are dedicated to fostering global academic collaboration, cross-cultural understanding, and knowledge exchange among universities worldwide.
                 </p>
                 <p className="text-gray-700 mb-8 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Pellentesque habitant morbi tristique senectus et netus et
-                  malesuada fames ac turpis egestas. Vestibulum tortor quam,
-                  feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
-                  libero sit amet quam egestas semper. Aenean ultricies mi vitae
-                  est mauris placerat eleifend leo.
+                  Through our diverse range of programs, webinars, and collaborative initiatives, we create opportunities for students, researchers, and academics to connect, share insights, and build meaningful partnerships that transcend geographical boundaries.
                 </p>
                 <motion.button
                   onClick={() => onNavigate("about-gis")}
@@ -723,12 +713,7 @@ export function Home({ onNavigate }: HomeProps) {
                 Our Programs
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur excepteur sint occaecat cupidatat non proident.
+                GIS continues to spearhead numerous collaborative programs with global institutions, dedicated to community development and services that actively contribute to the achievement of Sustainable Development Goals (SDGs). The following encapsulates GIS's annual programs.
               </p>
             </div>
 
@@ -741,7 +726,7 @@ export function Home({ onNavigate }: HomeProps) {
                   iconColor: "text-red-500",
                   bgColor: "bg-red-50",
                   description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
+                    "Building sustainable communities through global partnerships",
                 },
                 {
                   name: "GIS International Conference",
@@ -749,7 +734,7 @@ export function Home({ onNavigate }: HomeProps) {
                   iconColor: "text-[var(--forest-green)]",
                   bgColor: "bg-green-50",
                   description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
+                    "Annual gathering of academic leaders and researchers",
                 },
                 {
                   name: "GIS Research Grant & Funding",
@@ -757,32 +742,32 @@ export function Home({ onNavigate }: HomeProps) {
                   iconColor: "text-[var(--gold)]",
                   bgColor: "bg-amber-50",
                   description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
+                    "Supporting innovative research initiatives globally",
                 },
-                {
-                  name: "Student Exchange Program",
-                  icon: Calendar,
-                  iconColor: "text-blue-500",
-                  bgColor: "bg-blue-50",
-                  description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
-                },
-                {
-                  name: "Faculty Development Program",
-                  icon: Award,
-                  iconColor: "text-purple-500",
-                  bgColor: "bg-purple-50",
-                  description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
-                },
-                {
-                  name: "Joint Research Initiative",
-                  icon: Sparkles,
-                  iconColor: "text-teal-500",
-                  bgColor: "bg-teal-50",
-                  description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
-                },
+                // {
+                //   name: "Student Exchange Program",
+                //   icon: Calendar,
+                //   iconColor: "text-blue-500",
+                //   bgColor: "bg-blue-50",
+                //   description:
+                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
+                // },
+                // {
+                //   name: "Faculty Development Program",
+                //   icon: Award,
+                //   iconColor: "text-purple-500",
+                //   bgColor: "bg-purple-50",
+                //   description:
+                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
+                // },
+                // {
+                //   name: "Joint Research Initiative",
+                //   icon: Sparkles,
+                //   iconColor: "text-teal-500",
+                //   bgColor: "bg-teal-50",
+                //   description:
+                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
+                // },
               ].map((program, index) => (
                 <motion.div
                   key={index}

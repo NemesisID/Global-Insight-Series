@@ -46,7 +46,7 @@ export function AboutGIS() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-white/90"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Empowering Global Academic Excellence Through Collaboration
           </motion.p>
         </div>
       </section>

@@ -47,7 +47,7 @@ export function VisionMission() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-white/90"
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Our Guiding Principles for Global Academic Excellence
           </motion.p>
         </div>
       </section>
@@ -94,21 +94,11 @@ export function VisionMission() {
               >
                 <div className="relative">
                   <motion.div
-                    className="absolute -inset-4 bg-gradient-to-r from-[var(--forest-green)] to-[var(--olive-green)] rounded-full blur-3xl opacity-20"
-                    animate={{ scale: [1, 1.1, 1], rotate: [0, 90, 0] }}
-                    transition={{ duration: 10, repeat: Infinity }}
-                  />
-                  <motion.div
                     className="relative w-64 h-64 mx-auto bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)] rounded-full flex items-center justify-center shadow-2xl"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <motion.div
-                      animate={{ scale: [1, 1.1, 1] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    >
-                      <Eye className="w-32 h-32 text-white" />
-                    </motion.div>
+                    <Eye className="w-32 h-32 text-white" />
                   </motion.div>
                   <motion.div
                     className="absolute -top-6 -right-6"
@@ -240,11 +230,6 @@ export function VisionMission() {
               >
                 <div className="relative">
                   <motion.div
-                    className="absolute -inset-4 bg-gradient-to-r from-[var(--gold)] to-[var(--bronze)] rounded-full blur-3xl opacity-20"
-                    animate={{ scale: [1, 1.1, 1], rotate: [0, -90, 0] }}
-                    transition={{ duration: 10, repeat: Infinity }}
-                  />
-                  <motion.div
                     className="relative w-64 h-64 mx-auto bg-gradient-to-br from-[var(--gold)] to-[var(--bronze)] rounded-full flex items-center justify-center shadow-2xl"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -309,8 +294,7 @@ export function VisionMission() {
                             <motion.div
                               className="w-3 h-3 bg-gradient-to-br from-[var(--gold)] to-[var(--bronze)] rounded-lg flex items-center justify-center mr-3 mt-2 flex-shrink-0"
                               whileHover={{ scale: 1.2, rotate: 90 }}
-                            >
-                            </motion.div>
+                            ></motion.div>
                             <span className="group-hover:text-[var(--gold)] transition-colors">
                               {item}
                             </span>
@@ -348,7 +332,7 @@ export function VisionMission() {
                 Our Core Values
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                These fundamental principles guide our actions and decisions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -356,37 +340,37 @@ export function VisionMission() {
                 {
                   title: "Collaboration",
                   description:
-                    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+                    "We believe in the power of working together across borders and disciplines to achieve common goals.",
                   gradient: "from-blue-500 to-blue-700",
                 },
                 {
                   title: "Excellence",
                   description:
-                    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+                    "We are committed to the highest standards of academic quality and continuous improvement in all our endeavors.",
                   gradient: "from-purple-500 to-purple-700",
                 },
                 {
                   title: "Inclusivity",
                   description:
-                    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+                    "We embrace diversity and create an environment where all voices are heard and valued.",
                   gradient: "from-green-500 to-green-700",
                 },
                 {
                   title: "Innovation",
                   description:
-                    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+                    "We encourage creative thinking and new approaches to address challenges in education and research.",
                   gradient: "from-orange-500 to-orange-700",
                 },
                 {
                   title: "Integrity",
                   description:
-                    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+                    "We uphold the highest ethical standards and transparency in all our partnerships and activities.",
                   gradient: "from-red-500 to-red-700",
                 },
                 {
                   title: "Impact",
                   description:
-                    "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+                    "We strive to create meaningful and lasting positive change in the academic community and beyond.",
                   gradient: "from-teal-500 to-teal-700",
                 },
               ].map((value, index) => (

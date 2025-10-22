@@ -345,7 +345,7 @@ export function UpcomingEvents() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-xl text-white/90"
           >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Join us in our upcoming international programs and activities
           </motion.p>
         </div>
       </section>

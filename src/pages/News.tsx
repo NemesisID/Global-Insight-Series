@@ -169,7 +169,7 @@ export function News({ onNavigate }: NewsProps) {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-xl text-white/90 max-w-3xl mx-auto"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatem fuga, maxime sit ipsam unde optio.
+            Stay informed with the latest achievements, partnerships, and milestones from Global Insight Series
           </motion.p>
         </div>
       </section>
