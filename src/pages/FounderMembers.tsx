@@ -30,34 +30,42 @@ export function FounderMembers() {
     {
       name: "Universitas Pembangunan Nasional 'Veteran' Jawa Timur",
       website: "https://www.upnjatim.ac.id/",
+      logo: "assets/univlogo/UPN.png",
     },
     {
       name: "Anna University",
       website: "https://www.annauniv.edu/",
+      logo: "assets/univlogo/Anna.png",
     },
     {
       name: "Mahidol University",
       website: "https://mahidol.ac.th/",
+      logo: "assets/univlogo/Mahidol.png",
     },
     {
       name: "Uva Wellassa University of Sri Lanka",
       website: "https://www.uwu.ac.lk/",
+      logo: "assets/univlogo/Uwu.png",
     },
     {
       name: "Stamford University Bangladesh",
       website: "https://www.stamforduniversity.edu.bd/",
+      logo: "assets/univlogo/Stamford.png",
     },
     {
       name: "Chiang Mai University",
       website: "https://www.cmu.ac.th/",
+      logo: "assets/univlogo/Chiangmai.png",
     },
     {
-      name: "Sarasas Affiliated School",
-      website: "",
+      name: "Sarasas Suvarnabhumi Institute of Technology",
+      website: "https://svit.ac.th/",
+      logo: "assets/univlogo/SVIT.png",
     },
     {
       name: "Prince of Songkla University",
       website: "https://www.psu.ac.th/",
+      logo: "assets/univlogo/Psu.png",
     },
   ];
 
@@ -314,11 +322,11 @@ export function FounderMembers() {
                   >
                     <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full min-h-[180px] flex flex-col items-center justify-center text-center border border-white/50 relative overflow-hidden cursor-pointer">
                       {/* Decorative gradient on hover */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-[var(--forest-green)]/0 to-[var(--gold)]/0 group-hover:from-[var(--forest-green)]/5 group-hover:to-[var(--gold)]/5 transition-all duration-300 rounded-xl" />
+                      <div className="absolute inset-0 group-hover:from-[var(--forest-green)]/5 group-hover:to-[var(--gold)]/5 transition-all duration-300 rounded-xl" />
 
                       {/* Top accent line */}
                       <motion.div
-                        className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--forest-green)] via-[var(--olive-green)] to-[var(--gold)]"
+                        className="absolute top-0 left-0 right-0 h-1"
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}
                         viewport={{ once: true }}
@@ -326,10 +334,14 @@ export function FounderMembers() {
                       />
 
                       <motion.div
-                        className="w-16 h-16 bg-gradient-to-br from-[var(--forest-green)] to-[var(--olive-green)] rounded-2xl flex items-center justify-center mb-3 shadow-lg relative z-10 group-hover:shadow-xl group-hover:scale-110 transition-all flex-shrink-0"
+                        className="w-16 h-16 rounded-2xl flex items-center justify-center mb-3 shadow-lg relative z-10 group-hover:shadow-xl group-hover:scale-110 transition-all flex-shrink-0"
                         transition={{ duration: 0.6 }}
                       >
-                        <GraduationCap className="w-8 h-8 text-white" />
+                        <img
+                          src={university.logo}
+                          alt={university.name}
+                          className="max-w-5 max-h-5 object-contain"
+                        />
                       </motion.div>
 
                       <p className="text-sm text-gray-700 relative z-10 group-hover:text-[var(--forest-green)] transition-colors line-clamp-3">
