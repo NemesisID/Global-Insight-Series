@@ -1,6 +1,6 @@
 import { motion, useInView } from "motion/react";
 import { useRef, useState, useMemo } from "react";
-import { Calendar, MapPin, Users, Image as ImageIcon, Award, Trophy, Search, Filter, X } from "lucide-react";
+import { Calendar, MapPin, Clock, Users, Image as ImageIcon, Award, Trophy, Sparkles, Search, Filter, X } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Badge } from "../components/ui/badge";
@@ -53,7 +53,22 @@ export function PreviousEvents() {
   const [filterType, setFilterType] = useState("all");
   const eventsPerPage = 10;
 
-  const allEvents = [];
+  const allEvents = [
+    {
+      title: "THE ROLE OF CHEMICAL ENGINEERING",
+      date: "October 24, 2025",
+      day: "24",
+      month: "October",
+      time: "14:00 - 15:30 WIB",
+      location: "Zoom Meeting",
+      type: "Webinar",
+      participants: "-",
+      description:
+        `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #001" with the theme "The Role of Chemical Engineering" on October 24, 2025, from 14.00 to 15.30 (Western Indonesia Time) via Zoom Meeting. This event, which aims to build a multinational knowledge-sharing community, will feature two speakers: Ika Nawang Puspitarum, M.T. from UPN "Veteran" Jawa Timur and Dr. Ibrahim Hamdoon, a Chemistry Expert from Jeddah, Saudi Arabia. The webinar invites students, researchers, and academics to discuss and collaborate within an international academic community.`,
+      registrationLink: "https://bit.ly/gis001october",
+      poster: "assets/event/event1.png",
+    },
+  ];
 
   // Get unique event types for filter
   const eventTypes = useMemo(() => {
@@ -457,6 +472,10 @@ export function PreviousEvents() {
                         <div className="flex items-start text-gray-700">
                           <Calendar className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-[var(--forest-green)]" />
                           <span>{event.date}</span>
+                        </div>
+                        <div className="flex items-start text-gray-700">
+                          <Clock className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-[var(--forest-green)]" />
+                          <span>{event.time}</span>
                         </div>
                         <div className="flex items-start text-gray-700">
                           <MapPin className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-[var(--forest-green)]" />
