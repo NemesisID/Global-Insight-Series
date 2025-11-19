@@ -54,20 +54,20 @@ export function UpcomingEvents() {
   const eventsPerPage = 10;
 
   const allEvents = [
-    // {
-    //   title: "THE ROLE OF CHEMICAL ENGINEERING",
-    //   date: "October 24, 2025",
-    //   day: "24",
-    //   month: "October",
-    //   time: "14:00 - 15:30 WIB",
-    //   location: "Zoom Meeting",
-    //   type: "Webinar",
-    //   participants: "-",
-    //   description:
-    //     `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #001" with the theme "The Role of Chemical Engineering" on October 24, 2025, from 14.00 to 15.30 (Western Indonesia Time) via Zoom Meeting. This event, which aims to build a multinational knowledge-sharing community, will feature two speakers: Ika Nawang Puspitarum, M.T. from UPN "Veteran" Jawa Timur and Dr. Ibrahim Hamdoon, a Chemistry Expert from Jeddah, Saudi Arabia. The webinar invites students, researchers, and academics to discuss and collaborate within an international academic community.`,
-    //   registrationLink: "https://bit.ly/gis001october",
-    //   poster: "assets/event/event1.png",
-    // },
+    {
+      title: "Global Insight Series #002",
+      date: "November 20, 2025",
+      day: "20",
+      month: "November",
+      time: "16:00 - 18:00 WIB",
+      location: "Zoom Meeting",
+      type: "Webinar",
+      participants: "-",
+      description: 
+        `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #002" with the theme "Shifting Paradigms: From Flood Control to Flood Risk Management" on November 20, 2025, from 16.00 to 18.00 (Western Indonesia Time) via Zoom Meeting. This event, which aims to discuss innovations in sustainable development and water management, will feature two speakers: <b>Dr. Kegong Diao</b>, Associate Professor in Engineering and Sustainable Development from De Montfort University, Leicester, UK, and <b>Candra Andi Wijaya S.T.</b> from Dinas Sumber Daya Air dan Bina Marga, Surabaya City Government. The webinar invites students, researchers, and academics to gain insights and collaborate on modern flood risk strategies.`,
+      registrationLink: "https://zoom.us/j/95098975070?pwd=6aNP30A1AIlJ7eizbIaLrtQhFCIhxK.1",
+      poster: "assets/event/event2.jpg",
+    },
   ];
 
   // Get unique event types for filter
@@ -476,7 +476,7 @@ export function UpcomingEvents() {
                       </div>
 
                       <p className="text-gray-600 leading-relaxed mb-6">
-                        {event.description}
+                        <div dangerouslySetInnerHTML={{ __html: event.description }} />
                       </p>
 
                       <motion.a

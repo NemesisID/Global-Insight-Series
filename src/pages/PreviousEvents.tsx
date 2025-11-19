@@ -55,7 +55,7 @@ export function PreviousEvents() {
 
   const allEvents = [
     {
-      title: "THE ROLE OF CHEMICAL ENGINEERING",
+      title: "Global Insight Series #001",
       date: "October 24, 2025",
       day: "24",
       month: "October",
@@ -64,7 +64,7 @@ export function PreviousEvents() {
       type: "Webinar",
       participants: "-",
       description:
-        `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #001" with the theme "The Role of Chemical Engineering" on October 24, 2025, from 14.00 to 15.30 (Western Indonesia Time) via Zoom Meeting. This event, which aims to build a multinational knowledge-sharing community, will feature two speakers: Ika Nawang Puspitarum, M.T. from UPN "Veteran" Jawa Timur and Dr. Ibrahim Hamdoon, a Chemistry Expert from Jeddah, Saudi Arabia. The webinar invites students, researchers, and academics to discuss and collaborate within an international academic community.`,
+        `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #001" with the theme "The Role of Chemical Engineering" on October 24, 2025, from 14.00 to 15.30 (Western Indonesia Time) via Zoom Meeting. This event, which aims to build a multinational knowledge-sharing community, will feature two speakers: <b>Ika Nawang Puspitarum, M.T.</b> from UPN "Veteran" Jawa Timur and <b>Dr. Ibrahim Hamdoon</b>, a Chemistry Expert from Jeddah, Saudi Arabia. The webinar invites students, researchers, and academics to discuss and collaborate within an international academic community.`,
       registrationLink: "https://bit.ly/gis001october",
       poster: "assets/event/event1.png",
     },
@@ -488,7 +488,7 @@ export function PreviousEvents() {
                       </div>
 
                       <p className="text-gray-600 leading-relaxed mb-6">
-                        {event.description}
+                        <div dangerouslySetInnerHTML={{ __html: event.description }} />
                       </p>
                     </div>
 
