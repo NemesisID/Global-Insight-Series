@@ -55,19 +55,6 @@ export function PreviousEvents() {
 
   const allEvents = [
     {
-      title: "Global Insight Series #001",
-      date: "October 24, 2025",
-      day: "24",
-      month: "October",
-      time: "14:00 - 15:30 WIB",
-      location: "Zoom Meeting",
-      type: "Webinar",
-      participants: "-",
-      description: `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #001" with the theme "The Role of Chemical Engineering" on October 24, 2025, from 14.00 to 15.30 (Western Indonesia Time) via Zoom Meeting. This event, which aims to build a multinational knowledge-sharing community, will feature two speakers: <b>Ika Nawang Puspitarum, M.T.</b> from UPN "Veteran" Jawa Timur and <b>Dr. Ibrahim Hamdoon</b>, a Chemistry Expert from Jeddah, Saudi Arabia. The webinar invites students, researchers, and academics to discuss and collaborate within an international academic community.`,
-      registrationLink: "https://bit.ly/gis001october",
-      poster: "assets/event/event1.png",
-    },
-    {
       title: "Global Insight Series #002",
       date: "November 20, 2025",
       day: "20",
@@ -80,6 +67,19 @@ export function PreviousEvents() {
       registrationLink:
         "https://zoom.us/j/95098975070?pwd=6aNP30A1AIlJ7eizbIaLrtQhFCIhxK.1",
       poster: "assets/event/event2.jpg",
+    },
+    {
+      title: "Global Insight Series #001",
+      date: "October 24, 2025",
+      day: "24",
+      month: "October",
+      time: "14:00 - 15:30 WIB",
+      location: "Zoom Meeting",
+      type: "Webinar",
+      participants: "-",
+      description: `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #001" with the theme "The Role of Chemical Engineering" on October 24, 2025, from 14.00 to 15.30 (Western Indonesia Time) via Zoom Meeting. This event, which aims to build a multinational knowledge-sharing community, will feature two speakers: <b>Ika Nawang Puspitarum, M.T.</b> from UPN "Veteran" Jawa Timur and <b>Dr. Ibrahim Hamdoon</b>, a Chemistry Expert from Jeddah, Saudi Arabia. The webinar invites students, researchers, and academics to discuss and collaborate within an international academic community.`,
+      registrationLink: "https://bit.ly/gis001october",
+      poster: "assets/event/event1.png",
     },
   ];
 
