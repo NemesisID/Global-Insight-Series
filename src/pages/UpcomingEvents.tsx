@@ -54,20 +54,20 @@ export function UpcomingEvents() {
   const eventsPerPage = 10;
 
   const allEvents = [
-    // {
-    //   title: "Global Insight Series #002",
-    //   date: "November 20, 2025",
-    //   day: "20",
-    //   month: "November",
-    //   time: "16:00 - 18:00 WIB",
-    //   location: "Zoom Meeting",
-    //   type: "Webinar",
-    //   participants: "-",
-    //   description: 
-    //     `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #002" with the theme "Shifting Paradigms: From Flood Control to Flood Risk Management" on November 20, 2025, from 16.00 to 18.00 (Western Indonesia Time) via Zoom Meeting. This event, which aims to discuss innovations in sustainable development and water management, will feature two speakers: <b>Dr. Kegong Diao</b>, Associate Professor in Engineering and Sustainable Development from De Montfort University, Leicester, UK, and <b>Candra Andi Wijaya S.T.</b> from Dinas Sumber Daya Air dan Bina Marga, Surabaya City Government. The webinar invites students, researchers, and academics to gain insights and collaborate on modern flood risk strategies.`,
-    //   registrationLink: "https://zoom.us/j/95098975070?pwd=6aNP30A1AIlJ7eizbIaLrtQhFCIhxK.1",
-    //   poster: "assets/event/event2.jpg",
-    // },
+    {
+      title: "Global Insight Series #003",
+      date: "November 28, 2025",
+      day: "28",
+      month: "November",
+      time: "14:00 - 15:30 WIB",
+      location: "Zoom Meeting",
+      type: "Webinar",
+      participants: "-",
+      description: 
+        `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #003" with the theme "Innovations In Water Treatment" on November 28, 2025, from 14.00 to 15.30 (Western Indonesia Time) via Zoom Meeting. This event, which aims to explore advanced technologies for sustainable water management and SDG 6, will feature two distinguished speakers: <b>Dr. N Balasubramanian</b>, discussing Hybrid Membrane Bioreactors for wastewater treatment, and <b>Gayan Amarasooriya</b>, addressing global challenges through advanced filtration technologies. The webinar invites students, researchers, and academics to collaborate on future water solutions.`,
+      registrationLink: "https://zoom.us/j/99672737541?pwd=TOe3BzJJP6MNa3ebV4NShrJS5vuEDo.1",
+      poster: "assets/event/event3.jpg",
+    },
   ];
 
   // Get unique event types for filter
