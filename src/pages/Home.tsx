@@ -1,9 +1,9 @@
 import { motion, useInView } from "motion/react";
 import { useRef, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   ArrowRight,
   Users,
-  Calendar,
   Globe,
   Sparkles,
   TrendingUp,
@@ -17,10 +17,6 @@ import {
   FloatingElements,
   ParticleField,
 } from "../components/FloatingElements";
-
-interface HomeProps {
-  onNavigate: (page: string) => void;
-}
 
 function CountUp({ end, duration = 2 }: { end: number; duration?: number }) {
   const [count, setCount] = useState(0);
@@ -129,7 +125,8 @@ function AnimatedSection({
   );
 }
 
-export function Home({ onNavigate }: HomeProps) {
+export function Home() {
+  const navigate = useNavigate();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -148,13 +145,11 @@ export function Home({ onNavigate }: HomeProps) {
         playPromise
           .then(() => {
             // Video started playing successfully
-            console.log("Campaign video auto-playing");
             setIsVideoLoaded(true);
           })
           .catch((error) => {
             // Auto-play was prevented
             console.warn("Video autoplay failed:", error);
-            // Video will show fallback or user can manually play
           });
       }
     }
@@ -253,13 +248,6 @@ export function Home({ onNavigate }: HomeProps) {
                     }
                   }}
                 >
-                  {/* 
-                    INSTRUCTIONS:
-                    1. Place your video file in the /public folder (create if doesn't exist)
-                    2. Recommended path: /public/videos/campaign.mp4
-                    3. Update the src below to match your video filename
-                    4. Supported formats: .mp4, .webm, .ogg
-                  */}
                   <source src="videos/campaign.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -325,25 +313,29 @@ export function Home({ onNavigate }: HomeProps) {
             </div>
           </motion.div>
 
-          <motion.button
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => onNavigate("about-gis")}
-            className="bg-gradient-to-r from-[var(--gold)] to-[var(--bronze)] text-white px-10 py-5 rounded-full hover:shadow-2xl transition-all inline-flex items-center group relative overflow-hidden"
           >
-            <motion.div
-              className="absolute inset-0 bg-white"
-              initial={{ x: "-100%" }}
-              whileHover={{ x: "100%" }}
-              transition={{ duration: 0.5 }}
-              style={{ opacity: 0.1 }}
-            />
-            <span className="relative z-10">Learn More About GIS</span>
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
-          </motion.button>
+            <Link to="/about-gis">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-[var(--gold)] to-[var(--bronze)] text-white px-10 py-5 rounded-full hover:shadow-2xl transition-all inline-flex items-center group relative overflow-hidden"
+              >
+                <motion.div
+                  className="absolute inset-0 bg-white"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: "100%" }}
+                  transition={{ duration: 0.5 }}
+                  style={{ opacity: 0.1 }}
+                />
+                <span className="relative z-10">Learn More About GIS</span>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+              </motion.button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -674,15 +666,16 @@ export function Home({ onNavigate }: HomeProps) {
                 <p className="text-gray-700 mb-8 leading-relaxed">
                   Through our diverse range of programs, webinars, and collaborative initiatives, we create opportunities for students, researchers, and academics to connect, share insights, and build meaningful partnerships that transcend geographical boundaries.
                 </p>
-                <motion.button
-                  onClick={() => onNavigate("about-gis")}
-                  className="bg-[var(--forest-green)] text-white px-8 py-4 rounded-full hover:bg-[var(--olive-green)] transition-colors inline-flex items-center group shadow-lg"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Read More
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
+                <Link to="/about-gis">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-[var(--forest-green)] text-white px-8 py-4 rounded-full hover:bg-[var(--olive-green)] transition-colors inline-flex items-center group shadow-lg"
+                  >
+                    Read More
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </motion.button>
+                </Link>
               </motion.div>
             </div>
           </div>
@@ -744,30 +737,6 @@ export function Home({ onNavigate }: HomeProps) {
                   description:
                     "Supporting innovative research initiatives globally",
                 },
-                // {
-                //   name: "Student Exchange Program",
-                //   icon: Calendar,
-                //   iconColor: "text-blue-500",
-                //   bgColor: "bg-blue-50",
-                //   description:
-                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
-                // },
-                // {
-                //   name: "Faculty Development Program",
-                //   icon: Award,
-                //   iconColor: "text-purple-500",
-                //   bgColor: "bg-purple-50",
-                //   description:
-                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
-                // },
-                // {
-                //   name: "Joint Research Initiative",
-                //   icon: Sparkles,
-                //   iconColor: "text-teal-500",
-                //   bgColor: "bg-teal-50",
-                //   description:
-                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod",
-                // },
               ].map((program, index) => (
                 <motion.div
                   key={index}
@@ -870,48 +839,7 @@ export function Home({ onNavigate }: HomeProps) {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              {[
-                // {
-                //   title: "GIS International Summit 2025 Successfully Concluded",
-                //   date: "October 15, 2025",
-                //   category: "Event Highlights",
-                //   categoryColor: "bg-[var(--forest-green)]",
-                //   image:
-                //     "https://images.unsplash.com/photo-1623461487986-9400110de28e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzYwNDk5NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
-                //   excerpt:
-                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-                // },
-                // {
-                //   title: "New Strategic Partnership with Leading Universities",
-                //   date: "October 12, 2025",
-                //   category: "Partnership",
-                //   categoryColor: "bg-blue-600",
-                //   image:
-                //     "https://images.unsplash.com/photo-1694702740570-0a31ee1525c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjA1MjA4NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-                //   excerpt:
-                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-                // },
-                // {
-                //   title: "Breakthrough Research on Climate Published",
-                //   date: "October 10, 2025",
-                //   category: "Research",
-                //   categoryColor: "bg-[var(--gold)]",
-                //   image:
-                //     "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjA1MTM2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-                //   excerpt:
-                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-                // },
-                // {
-                //   title: "Student Exchange Program Milestone Reached",
-                //   date: "October 8, 2025",
-                //   category: "Student Programs",
-                //   categoryColor: "bg-purple-600",
-                //   image:
-                //     "https://images.unsplash.com/photo-1693011142814-aa33d7d1535c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzYwNTM4MDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-                //   excerpt:
-                //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.",
-                // },
-              ].map((news, index) => (
+              {[].map((news: any, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -919,64 +847,50 @@ export function Home({ onNavigate }: HomeProps) {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                 >
-                  <motion.div
-                    whileHover={{ y: -8 }}
-                    transition={{ duration: 0.3 }}
-                    onClick={() => onNavigate("news")}
-                  >
-                    <Card className="group hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden border border-gray-200 h-full flex flex-col bg-white">
-                      <div className="relative h-48 overflow-hidden">
-                        <ImageWithFallback
-                          src={news.image}
-                          alt={news.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute top-3 left-3">
-                          <motion.div
-                            className={`${news.categoryColor} text-white text-xs px-3 py-1 rounded-full`}
-                            whileHover={{ scale: 1.1 }}
-                          >
-                            {news.category}
-                          </motion.div>
+                  <Link to="/news">
+                    <motion.div
+                      whileHover={{ y: -8 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Card className="group hover:shadow-2xl transition-all duration-500 cursor-pointer overflow-hidden border border-gray-200 h-full flex flex-col bg-white">
+                        <div className="relative h-48 overflow-hidden">
+                          <ImageWithFallback
+                            src={news.image}
+                            alt={news.title}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          />
+                          <div className="absolute top-3 left-3">
+                            <motion.div
+                              className={`${news.categoryColor} text-white text-xs px-3 py-1 rounded-full`}
+                              whileHover={{ scale: 1.1 }}
+                            >
+                              {news.category}
+                            </motion.div>
+                          </div>
                         </div>
-                      </div>
 
-                      <CardContent className="p-5 flex-1 flex flex-col">
-                        <div className="flex items-center text-xs text-gray-500 mb-3">
-                          <Calendar className="w-3.5 h-3.5 mr-1.5" />
-                          {news.date}
-                        </div>
-                        <h3 className="text-base text-[var(--forest-green)] mb-3 line-clamp-2 group-hover:text-[var(--gold)] transition-colors">
-                          {news.title}
-                        </h3>
-                        <p className="text-gray-600 text-sm flex-1 line-clamp-2 mb-3">
-                          {news.excerpt}
-                        </p>
-                        <motion.div
-                          className="text-[var(--forest-green)] text-sm flex items-center group/link"
-                          whileHover={{ x: 5 }}
-                        >
-                          Read more
-                          <ArrowRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
-                        </motion.div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+                        <CardContent className="p-5 flex-1 flex flex-col">
+                          {/* ... existing card content ... */}
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  </Link>
                 </motion.div>
               ))}
             </div>
 
             {/* View All News Button */}
             <div className="text-center">
-              <motion.button
-                onClick={() => onNavigate("news")}
-                className="bg-gradient-to-r from-[var(--forest-green)] to-[var(--olive-green)] text-white px-8 py-4 rounded-full hover:shadow-xl transition-all inline-flex items-center group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View All News
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+              <Link to="/news">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-[var(--forest-green)] to-[var(--olive-green)] text-white px-8 py-4 rounded-full hover:shadow-xl transition-all inline-flex items-center group"
+                >
+                  View All News
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </motion.button>
+              </Link>
             </div>
           </div>
         </section>
@@ -1018,26 +932,27 @@ export function Home({ onNavigate }: HomeProps) {
               </p>
             </motion.div>
 
-            <motion.button
-              onClick={() => onNavigate("contact")}
-              className="bg-[var(--gold)] text-white px-12 py-5 rounded-full hover:bg-[var(--bronze)] transition-all inline-flex items-center shadow-2xl group relative overflow-hidden"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-            >
-              <motion.div
-                className="absolute inset-0 bg-white"
-                initial={{ x: "-100%" }}
-                whileHover={{ x: "100%" }}
-                transition={{ duration: 0.5 }}
-                style={{ opacity: 0.2 }}
-              />
-              <span className="relative z-10">Get In Touch</span>
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform relative z-10" />
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[var(--gold)] text-white px-12 py-5 rounded-full hover:bg-[var(--bronze)] transition-all inline-flex items-center shadow-2xl group relative overflow-hidden"
+              >
+                <motion.div
+                  className="absolute inset-0 bg-white"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: "100%" }}
+                  transition={{ duration: 0.5 }}
+                  style={{ opacity: 0.2 }}
+                />
+                <span className="relative z-10">Get In Touch</span>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform relative z-10" />
+              </motion.button>
+            </Link>
           </div>
         </section>
       </AnimatedSection>

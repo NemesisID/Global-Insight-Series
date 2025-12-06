@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+}
+
+// SANDBOX CONFIGURATION (SQLite)
+// To use MySQL in production:
+// 1. Change provider to "mysql"
+// 2. Update DATABASE_URL in .env to your MySQL connection string
+datasource db {
+  provider = "sqlite"
+}
+
+model Event {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  date        DateTime
+  location    String
+  imageUrl    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model News {
+  id           Int      @id @default(autoincrement())
+  title        String
+  content      String   // Will store HTML from Rich Text Editor
+  author       String
+  thumbnailUrl String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
