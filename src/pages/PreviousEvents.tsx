@@ -55,6 +55,20 @@ export function PreviousEvents() {
 
   const allEvents = [
     {
+      title: "Global Insight Series #003",
+      date: "November 28, 2025",
+      day: "28",
+      month: "November",
+      time: "14:00 - 15:30 WIB",
+      location: "Zoom Meeting",
+      type: "Webinar",
+      participants: "-",
+      description: 
+        `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #003" with the theme "Innovations In Water Treatment" on November 28, 2025, from 14.00 to 15.30 (Western Indonesia Time) via Zoom Meeting. This event, which aims to explore advanced technologies for sustainable water management and SDG 6, will feature two distinguished speakers: <b>Dr. N Balasubramanian</b>, discussing Hybrid Membrane Bioreactors for wastewater treatment, and <b>Gayan Amarasooriya</b>, addressing global challenges through advanced filtration technologies. The webinar invites students, researchers, and academics to collaborate on future water solutions.`,
+      registrationLink: "https://zoom.us/j/99672737541?pwd=TOe3BzJJP6MNa3ebV4NShrJS5vuEDo.1",
+      poster: "assets/event/event3.jpg",
+    },
+    {
       title: "Global Insight Series #002",
       date: "November 20, 2025",
       day: "20",
