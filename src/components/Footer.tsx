@@ -1,21 +1,18 @@
 import { Mail, Phone, Linkedin, Instagram, Youtube } from "lucide-react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
-interface FooterProps {
-  onNavigate: (page: string) => void;
-}
-
-export function Footer({ onNavigate }: FooterProps) {
+export function Footer() {
   const quickLinks = [
-    { label: "Home", page: "home" },
-    { label: "About GIS", page: "about-gis" },
-    { label: "Vision & Mission", page: "vision-mission" },
-    { label: "Structure", page: "structure" },
-    { label: "Founder & Members", page: "founder-members" },
-    { label: "Upcoming Event", page: "upcoming-events" },
-    { label: "Previous Event", page: "previous-events" },
-    { label: "News", page: "news" },
-    { label: "Contact Us", page: "contact" },
+    { label: "Home", page: "/" },
+    { label: "About GIS", page: "/about-gis" },
+    { label: "Vision & Mission", page: "/vision-mission" },
+    { label: "Structure", page: "/structure" },
+    { label: "Founder & Members", page: "/founder-members" },
+    { label: "Upcoming Event", page: "/upcoming-events" },
+    { label: "Previous Event", page: "/previous-events" },
+    { label: "News", page: "/news" },
+    { label: "Contact Us", page: "/contact" },
   ];
 
   return (
@@ -30,23 +27,25 @@ export function Footer({ onNavigate }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Column 1: Logo & Contact Info */}
           <div>
-            <motion.div
-              className="flex items-center mb-6 group cursor-pointer"
-              whileHover={{ scale: 1.02 }}
-            >
+            <Link to="/">
               <motion.div
-                className="w-16 h-16 flex items-center justify-center mr-4 shadow-lg"
-                transition={{ duration: 0.6 }}
+                className="flex items-center mb-6 group cursor-pointer"
+                whileHover={{ scale: 1.02 }}
               >
-                <span className="text-2xl from-[var(--forest-green)] to-[var(--olive-green)] bg-clip-text text-transparent">
-                  <img src="assets/logo.png" alt="GIS Logo" />
-                </span>
+                <motion.div
+                  className="w-16 h-16 flex items-center justify-center mr-4 shadow-lg"
+                  transition={{ duration: 0.6 }}
+                >
+                  <span className="text-2xl from-[var(--forest-green)] to-[var(--olive-green)] bg-clip-text text-transparent">
+                    <img src="/assets/logo.png" alt="GIS Logo" className="w-full h-full object-contain" />
+                  </span>
+                </motion.div>
+                <div>
+                  <div className="text-xl">Global Insight Series</div>
+                  <div className="text-sm text-white/80">UPN Veteran Jawa Timur</div>
+                </div>
               </motion.div>
-              <div>
-                <div className="text-xl">Global Insight Series</div>
-                <div className="text-sm text-white/80">UPN Veteran Jawa Timur</div>
-              </div>
-            </motion.div>
+            </Link>
             <div className="space-y-3">
               <motion.div
                 className="flex items-center space-x-3 group cursor-pointer"
@@ -103,19 +102,22 @@ export function Footer({ onNavigate }: FooterProps) {
             </h3>
             <div className="grid grid-cols-2 gap-3">
               {quickLinks.map((link, index) => (
-                <motion.button
+                <Link
                   key={link.page}
-                  onClick={() => onNavigate(link.page)}
-                  className="text-sm text-white/80 hover:text-[var(--gold)] transition-colors text-left group flex items-center"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  whileHover={{ x: 5 }}
+                  to={link.page}
                 >
-                  <span className="w-0 h-0.5 bg-[var(--gold)] group-hover:w-2 transition-all mr-0 group-hover:mr-2" />
-                  {link.label}
-                </motion.button>
+                  <motion.div
+                    className="text-sm text-white/80 hover:text-[var(--gold)] transition-colors text-left group flex items-center cursor-pointer"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    whileHover={{ x: 5 }}
+                  >
+                    <span className="w-0 h-0.5 bg-[var(--gold)] group-hover:w-2 transition-all mr-0 group-hover:mr-2" />
+                    {link.label}
+                  </motion.div>
+                </Link>
               ))}
             </div>
           </div>

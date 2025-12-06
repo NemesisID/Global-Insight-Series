@@ -1,10 +1,13 @@
 import { motion, useInView } from "motion/react";
-import { useRef, useState, useMemo } from "react";
+import { useRef, useState, useMemo, useEffect } from "react";
 import { Newspaper, Calendar, Search, Filter, X, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Badge } from "../components/ui/badge";
 import { Input } from "../components/ui/input";
+import axios from "axios";
+import { format } from "date-fns";
+import { Link } from "react-router-dom";
 import {
   Select,
   SelectContent,
@@ -23,8 +26,14 @@ import {
   PaginationPrevious,
 } from "../components/ui/pagination";
 
-interface NewsProps {
-  onNavigate: (page: string, data?: any) => void;
+// Backend type
+interface NewsItem {
+  id: number;
+  title: string;
+  content: string;
+  author: string;
+  thumbnailUrl?: string;
+  createdAt: string;
 }
 
 function AnimatedSection({
@@ -50,46 +59,40 @@ function AnimatedSection({
   );
 }
 
-export function News({ onNavigate }: NewsProps) {
+export function News() {
+  const [newsList, setNewsList] = useState<NewsItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
-  const [filterCategory, setFilterCategory] = useState("all");
   const newsPerPage = 20;
 
-  const handleArticleClick = (article: any) => {
-    onNavigate("news-detail", article);
-  };
-
-  const allNews = [
-  ];
-
-  const getCategoryColor = (category: string) => {
-    const colors: { [key: string]: string } = {
-      "Event Highlights": "bg-[var(--forest-green)]",
-      "Partnership": "bg-blue-600",
-      "Research Excellence": "bg-[var(--gold)]",
-      "Student Programs": "bg-purple-600",
-      "Academic Programs": "bg-[var(--olive-green)]",
-      "Awards & Recognition": "bg-[var(--bronze)]",
-      "Community": "bg-teal-600",
-    };
-    return colors[category] || "bg-gray-600";
-  };
-
-  // Get unique categories for filter
-  const categories = useMemo(() => {
-    const cats = allNews.map((news) => news.category);
-    return ["all", ...Array.from(new Set(cats))];
+  useEffect(() => {
+    fetchNews();
   }, []);
+
+  const fetchNews = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/api/news");
+      setNewsList(response.data);
+    } catch (error) {
+      console.error("Failed to fetch news", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Strip HTML tags for excerpt
+  const getExcerpt = (html: string) => {
+    const tmp = document.createElement("DIV");
+    tmp.innerHTML = html;
+    const text = tmp.textContent || tmp.innerText || "";
+    return text.substring(0, 150) + (text.length > 150 ? "..." : "");
+  };
 
   // Filter and search news
   const filteredNews = useMemo(() => {
-    let filtered = allNews;
-
-    // Apply category filter
-    if (filterCategory !== "all") {
-      filtered = filtered.filter((news) => news.category === filterCategory);
-    }
+    let filtered = newsList;
 
     // Apply search
     if (searchQuery.trim() !== "") {
@@ -97,13 +100,12 @@ export function News({ onNavigate }: NewsProps) {
       filtered = filtered.filter(
         (news) =>
           news.title.toLowerCase().includes(query) ||
-          news.excerpt.toLowerCase().includes(query) ||
-          news.category.toLowerCase().includes(query)
+          news.content.toLowerCase().includes(query)
       );
     }
 
     return filtered;
-  }, [searchQuery, filterCategory]);
+  }, [searchQuery, newsList]);
 
   // Calculate pagination
   const totalPages = Math.ceil(filteredNews.length / newsPerPage);
@@ -118,11 +120,18 @@ export function News({ onNavigate }: NewsProps) {
 
   const handleResetFilters = () => {
     setSearchQuery("");
-    setFilterCategory("all");
     setCurrentPage(1);
   };
 
-  const hasActiveFilters = searchQuery.trim() !== "" || filterCategory !== "all";
+  const hasActiveFilters = searchQuery.trim() !== "";
+
+  if (loading) {
+    return (
+      <div className="min-h-screen pt-20 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[var(--forest-green)]"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen pt-20">
@@ -190,7 +199,7 @@ export function News({ onNavigate }: NewsProps) {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <Input
                     type="text"
-                    placeholder="Search news by title, content, or category..."
+                    placeholder="Search news by title or content..."
                     value={searchQuery}
                     onChange={(e) => {
                       setSearchQuery(e.target.value);
@@ -198,32 +207,6 @@ export function News({ onNavigate }: NewsProps) {
                     }}
                     className="pl-10 pr-4 py-6 border-gray-200 focus:border-[var(--forest-green)] focus:ring-[var(--forest-green)]"
                   />
-                </div>
-
-                {/* Filter Dropdown */}
-                <div className="w-full lg:w-64">
-                  <Select
-                    value={filterCategory}
-                    onValueChange={(value) => {
-                      setFilterCategory(value);
-                      setCurrentPage(1);
-                    }}
-                  >
-                    <SelectTrigger className="h-12 border-gray-200 focus:border-[var(--forest-green)] focus:ring-[var(--forest-green)]">
-                      <Filter className="w-4 h-4 mr-2" />
-                      <SelectValue placeholder="Filter by category" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectGroup>
-                        <SelectLabel>Category</SelectLabel>
-                        {categories.map((category) => (
-                          <SelectItem key={category} value={category}>
-                            {category === "all" ? "All News" : category}
-                          </SelectItem>
-                        ))}
-                      </SelectGroup>
-                    </SelectContent>
-                  </Select>
                 </div>
 
                 {/* Reset Filters Button */}
@@ -251,11 +234,6 @@ export function News({ onNavigate }: NewsProps) {
                   {searchQuery && (
                     <Badge className="bg-[var(--forest-green)]/10 text-[var(--forest-green)] border-0 px-3 py-1">
                       Search: "{searchQuery}"
-                    </Badge>
-                  )}
-                  {filterCategory !== "all" && (
-                    <Badge className="bg-[var(--forest-green)]/10 text-[var(--forest-green)] border-0 px-3 py-1">
-                      Category: {filterCategory}
                     </Badge>
                   )}
                 </motion.div>
@@ -298,7 +276,7 @@ export function News({ onNavigate }: NewsProps) {
                 </motion.div>
                 <h3 className="text-2xl text-gray-800 mb-2">No News Found</h3>
                 <p className="text-gray-600 mb-6">
-                  Try adjusting your search or filters to find what you're looking for.
+                  Try adjusting your search to find what you're looking for.
                 </p>
                 <motion.button
                   onClick={handleResetFilters}
@@ -319,35 +297,37 @@ export function News({ onNavigate }: NewsProps) {
                     <motion.div
                       whileHover={{ y: -8 }}
                       transition={{ duration: 0.3 }}
-                      onClick={() => handleArticleClick(news)}
                     >
+                      <Link to={`/news/${news.id}`}>
                       <Card className="group hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden border border-gray-200 h-full flex flex-col bg-white">
                         <div className="relative h-48 overflow-hidden">
-                          <ImageWithFallback
-                            src={news.image}
-                            alt={news.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                          />
+                          {news.thumbnailUrl ? (
+                            <ImageWithFallback
+                              src={news.thumbnailUrl}
+                              alt={news.title}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
+                          ) : (
+                             <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">
+                                <Newspaper className="w-12 h-12" />
+                             </div>
+                          )}
                           <div className="absolute top-3 left-3">
-                            <Badge
-                              className={`${getCategoryColor(
-                                news.category
-                              )} text-white border-0 text-xs`}
-                            >
-                              {news.category}
+                            <Badge className="bg-[var(--forest-green)] text-white border-0 text-xs">
+                              News
                             </Badge>
                           </div>
                         </div>
                         <CardContent className="p-5 flex-1 flex flex-col">
                           <div className="flex items-center text-xs text-gray-500 mb-3">
                             <Calendar className="w-3.5 h-3.5 mr-1.5" />
-                            {news.date}
+                            {format(new Date(news.createdAt), "PPP")}
                           </div>
                           <h3 className="text-base text-[var(--forest-green)] mb-3 line-clamp-2 group-hover:text-[var(--olive-green)] transition-colors">
                             {news.title}
                           </h3>
                           <p className="text-gray-600 text-sm flex-1 line-clamp-3 mb-3">
-                            {news.excerpt}
+                            {getExcerpt(news.content)}
                           </p>
                           <motion.div
                             className="text-[var(--forest-green)] hover:text-[var(--olive-green)] transition-colors text-sm flex items-center group/link"
@@ -358,11 +338,11 @@ export function News({ onNavigate }: NewsProps) {
                           </motion.div>
                         </CardContent>
                       </Card>
+                      </Link>
                     </motion.div>
                   </AnimatedSection>
                 ))}
               </div>
-    
     
               {/* Pagination */}
               {totalPages > 1 && (
