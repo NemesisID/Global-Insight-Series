@@ -25,8 +25,8 @@ model Event {
   location         String
   type             String   @default("Webinar") // e.g., "Webinar", "Workshop", "Conference"
   participants     String   @default("-") // e.g., "100+ participants" or "-"
-  description      String   // Full HTML description
-  poster           String?  // Image URL or base64
+  description      String   @db.Text // TEXT type for long content
+  poster           String?  // Image path
   registrationLink String?
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
