@@ -35,7 +35,7 @@ model Event {
 model News {
   id        Int      @id @default(autoincrement())
   title     String
-  content   String   // Stores rich text HTML
+  content   String   @db.LongText // Stores rich text HTML (LongText for massive content)
   image     String?
   author    String?
   createdAt DateTime @default(now())
