@@ -213,12 +213,15 @@ export function AdminNews() {
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-gray-800">News Management</h2>
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 tracking-tight">News Management</h2>
+          <p className="text-sm text-gray-500 mt-1">Publish and edit news articles and updates.</p>
+        </div>
         <button
           onClick={() => setIsEditing(true)}
-          className="px-4 py-2 bg-[var(--forest-green)] text-white rounded-lg hover:bg-[var(--olive-green)] transition-colors flex items-center"
+          className="px-5 py-2.5 bg-[var(--forest-green)] text-white rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all font-semibold shadow-sm flex items-center gap-2 text-sm"
         >
-          <Plus className="w-5 h-5 mr-2" />
+          <Plus className="w-4 h-4" />
           Add News
         </button>
       </div>
@@ -227,11 +230,11 @@ export function AdminNews() {
         <div className="overflow-x-auto">
           <table className="w-full text-left">
             <thead>
-              <tr className="bg-gray-50 border-b border-gray-100">
-                <th className="px-6 py-4 font-medium text-gray-500">Image</th>
-                <th className="px-6 py-4 font-medium text-gray-500">Title</th>
-                <th className="px-6 py-4 font-medium text-gray-500">Date</th>
-                <th className="px-6 py-4 font-medium text-gray-500">Actions</th>
+              <tr className="bg-gray-50/50 border-b border-gray-100">
+                <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Image</th>
+                <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Title</th>
+                <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Date</th>
+                <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">

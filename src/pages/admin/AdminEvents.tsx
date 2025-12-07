@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Plus, Pencil, Trash2, X, Save, Image as ImageIcon } from "lucide-react";
 import { toast } from "sonner";
+import { PosterUpload } from "../../components/PosterUpload";
 
 interface EventItem {
   id: number;
@@ -50,19 +51,6 @@ export function AdminEvents() {
       setEvents([]); // Set empty array on error
     } finally {
       setIsLoading(false);
-    }
-  };
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      setPosterFile(file);
-      // Create preview
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setPosterPreview(reader.result as string);
-      };
-      reader.readAsDataURL(file);
     }
   };
 
@@ -149,7 +137,7 @@ export function AdminEvents() {
 
   if (isEditing) {
     return (
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 sm:p-6 mb-8">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-bold text-gray-800">
             {editId ? "Edit Event" : "Create Event"}
@@ -259,38 +247,28 @@ export function AdminEvents() {
             />
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Event Poster</label>
-            <div className="flex items-center space-x-4">
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageUpload}
-                className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[var(--forest-green)]/10 file:text-[var(--forest-green)] hover:file:bg-[var(--forest-green)]/20"
-              />
-              {posterPreview && (
-                <div className="h-16 w-16 rounded overflow-hidden border border-gray-200">
-                  <img src={posterPreview} alt="Preview" className="h-full w-full object-cover" />
-                </div>
-              )}
-            </div>
-          </div>
+          <PosterUpload 
+            posterPreview={posterPreview}
+            posterFile={posterFile}
+            onFileChange={setPosterFile}
+            onPreviewChange={setPosterPreview}
+          />
 
-          <div className="flex justify-end pt-6 border-t border-gray-100">
+          <div className="flex flex-col-reverse sm:flex-row justify-end gap-3 pt-6 border-t border-gray-100">
             <button
               type="button"
               onClick={() => { setIsEditing(false); resetForm(); }}
-              className="px-6 py-2 mr-4 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+              className="w-full sm:w-auto px-6 py-3 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors font-medium"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isLoading}
-              className="px-6 py-2 bg-[var(--forest-green)] text-white rounded-lg hover:bg-[var(--olive-green)] transition-colors flex items-center"
+              className="w-full sm:w-auto px-8 py-3 bg-[var(--forest-green)] text-white rounded-lg hover:opacity-90 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-md"
             >
-              <Save className="w-4 h-4 mr-2" />
-              {isLoading ? "Saving..." : "Save Event"}
+              <Save className="w-5 h-5" />
+              {isLoading ? "Saving..." : (editId ? "Update Event" : "Create Event")}
             </button>
           </div>
         </form>
@@ -300,27 +278,31 @@ export function AdminEvents() {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-gray-800">Events Management</h2>
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 tracking-tight">Events Management</h2>
+          <p className="text-sm text-gray-500 mt-1">Create and manage upcoming events and webinars.</p>
+        </div>
         <button
           onClick={() => setIsEditing(true)}
-          className="px-4 py-2 bg-[var(--forest-green)] text-white rounded-lg hover:bg-[var(--olive-green)] transition-colors flex items-center"
+          className="w-full sm:w-auto px-5 py-2.5 bg-[var(--forest-green)] text-white rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all font-semibold shadow-md flex items-center justify-center gap-2 text-sm"
         >
-          <Plus className="w-5 h-5 mr-2" />
-          Add Event
+          <Plus className="w-4 h-4" />
+          <span>Add Event</span>
         </button>
       </div>
 
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+      {/* Desktop Table View */}
+      <div className="hidden sm:block bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full text-left">
+          <table className="w-full text-left min-w-[800px]">
             <thead>
-              <tr className="bg-gray-50 border-b border-gray-100">
-                <th className="px-6 py-4 font-medium text-gray-500">Poster</th>
-                <th className="px-6 py-4 font-medium text-gray-500">Title</th>
-                <th className="px-6 py-4 font-medium text-gray-500">Date</th>
-                <th className="px-6 py-4 font-medium text-gray-500">Type</th>
-                <th className="px-6 py-4 font-medium text-gray-500">Actions</th>
+              <tr className="bg-gray-50/50 border-b border-gray-100">
+                <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Poster</th>
+                <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Title</th>
+                <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Date</th>
+                <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Type</th>
+                <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
@@ -369,6 +351,58 @@ export function AdminEvents() {
             </tbody>
           </table>
         </div>
+      </div>
+
+      {/* Mobile Card View */}
+      <div className="sm:hidden space-y-4">
+        {events.length === 0 ? (
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center text-gray-500">
+            No events found. Create one to get started.
+          </div>
+        ) : (
+          events.map((item) => (
+            <div key={item.id} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="relative h-48 bg-gray-100">
+                {item.poster ? (
+                  <img src={item.poster} alt={item.title} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-gray-400">
+                    <ImageIcon className="w-12 h-12" />
+                  </div>
+                )}
+                <div className="absolute top-2 right-2 flex space-x-2">
+                  <span className="px-2 py-1 bg-white/90 backdrop-blur text-xs font-semibold text-gray-700 rounded-md shadow-sm">
+                    {item.type}
+                  </span>
+                </div>
+              </div>
+              
+              <div className="p-4">
+                <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
+                <p className="text-sm text-gray-500 mb-4">
+                  {new Date(item.date).toLocaleDateString()} • {item.time}
+                </p>
+                
+                <div className="flex items-center gap-2 pt-3 border-t border-gray-100">
+                  <button
+                    onClick={() => handleEdit(item)}
+                    className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
+                  >
+                    <Pencil className="w-4 h-4" />
+                    Edit
+                  </button>
+                  <button
+                    onClick={() => handleDelete(item.id)}
+                    className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-red-600 bg-red-50 hover:bg-red-100 rounded-lg transition-colors"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
