@@ -1,4 +1,4 @@
-import { Upload } from "lucide-react";
+import { Upload, X } from "lucide-react";
 
 // Add this component to AdminEvents.tsx after imports
 
