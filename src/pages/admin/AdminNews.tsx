@@ -191,13 +191,13 @@ export function AdminNews() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Content</label>
-            <div className="h-96 mb-12">
+            <div className="mb-12">
               <ReactQuill 
                 theme="snow" 
                 value={content} 
                 onChange={setContent}
                 modules={modules}
-                className="h-full"
+                className="bg-white"
               />
             </div>
           </div>

@@ -5052,4 +5052,16 @@ html {
 .ql-snow .ql-picker.ql-size .ql-picker-label[data-value="48px"]::before { content: "48"; }
 .ql-snow .ql-picker.ql-size .ql-picker-label[data-value="72px"]::before { content: "72"; }
 
+/* Quill Auto-Expand Height */
+.ql-container {
+  height: auto !important;
+  font-size: 16px; /* Ensure base font size is readable */
+}
+
+.ql-editor {
+  min-height: 300px; /* Default height */
+  height: auto !important;
+  overflow-y: visible !important; /* Allow growing */
+}
+
 
