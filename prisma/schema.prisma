@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // Option 1: SQLite (Current)
+  // provider = "sqlite"
+  
+  // Option 2: MySQL (Future)
+  // 1. Comment out 'provider = "sqlite"' above
+  // 2. Uncomment 'provider = "mysql"' below
+  provider = "mysql"
+
+  url = env("DATABASE_URL")
+}
+
+model Event {
+  id               Int      @id @default(autoincrement())
+  title            String
+  date             DateTime
+  time             String   // e.g., "14:00 - 15:30 WIB"
+  location         String
+  type             String   @default("Webinar") // e.g., "Webinar", "Workshop", "Conference"
+  participants     String   @default("-") // e.g., "100+ participants" or "-"
+  description      String   // Full HTML description
+  poster           String?  // Image URL or base64
+  registrationLink String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model News {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String   // Stores rich text HTML
+  image     String?
+  author    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

@@ -1,4 +1,4 @@
-import { motion, useInView } from "motion/react";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Eye, Target, CheckCircle, Sparkles } from "lucide-react";
 import { FloatingElements } from "../components/FloatingElements";

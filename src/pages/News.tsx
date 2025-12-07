@@ -1,5 +1,6 @@
-import { motion, useInView } from "motion/react";
-import { useRef, useState, useMemo } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState, useMemo, useEffect } from "react";
+import axios from "axios";
 import { Newspaper, Calendar, Search, Filter, X, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
@@ -54,14 +55,35 @@ export function News({ onNavigate }: NewsProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [filterCategory, setFilterCategory] = useState("all");
+  const [newsList, setNewsList] = useState<any[]>([]);
   const newsPerPage = 20;
+
+  useEffect(() => {
+    fetchNews();
+  }, []);
+
+  const fetchNews = async () => {
+    try {
+      const res = await axios.get("/api/news");
+      const mappedNews = res.data.map((item: any) => ({
+        id: item.id,
+        title: item.title,
+        date: new Date(item.date).toLocaleDateString(), // Format date
+        category: "Event Highlights", // Default or map if added to schema
+        excerpt: item.content.replace(/<[^>]+>/g, '').substring(0, 150) + "...", // Plain text excerpt
+        fullContent: item.content,
+        image: item.image,
+        author: item.author
+      }));
+      setNewsList(mappedNews);
+    } catch (error) {
+      console.error("Failed to fetch news", error);
+    }
+  };
 
   const handleArticleClick = (article: any) => {
     onNavigate("news-detail", article);
   };
-
-  const allNews = [
-  ];
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
@@ -78,13 +100,13 @@ export function News({ onNavigate }: NewsProps) {
 
   // Get unique categories for filter
   const categories = useMemo(() => {
-    const cats = allNews.map((news) => news.category);
-    return ["all", ...Array.from(new Set(cats))];
+    // If backend adds category, use that. For now simulated.
+    return ["all", "Event Highlights"]; 
   }, []);
 
   // Filter and search news
   const filteredNews = useMemo(() => {
-    let filtered = allNews;
+    let filtered = newsList;
 
     // Apply category filter
     if (filterCategory !== "all") {
@@ -103,7 +125,7 @@ export function News({ onNavigate }: NewsProps) {
     }
 
     return filtered;
-  }, [searchQuery, filterCategory]);
+  }, [searchQuery, filterCategory, newsList]);
 
   // Calculate pagination
   const totalPages = Math.ceil(filteredNews.length / newsPerPage);
@@ -323,11 +345,15 @@ export function News({ onNavigate }: NewsProps) {
                     >
                       <Card className="group hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden border border-gray-200 h-full flex flex-col bg-white">
                         <div className="relative h-48 overflow-hidden">
+                          {news.image ? (
                           <ImageWithFallback
                             src={news.image}
                             alt={news.title}
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                           />
+                          ) : (
+                             <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">No Image</div>
+                          )}
                           <div className="absolute top-3 left-3">
                             <Badge
                               className={`${getCategoryColor(
@@ -362,7 +388,6 @@ export function News({ onNavigate }: NewsProps) {
                   </AnimatedSection>
                 ))}
               </div>
-    
     
               {/* Pagination */}
               {totalPages > 1 && (

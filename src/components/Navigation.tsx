@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 interface NavigationProps {
@@ -54,7 +54,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
               transition={{ duration: 0.6 }}
             >
               <span>
-                <img src="assets\logo.png" alt="GIS Logo" />
+                <img src="/assets/logo.png" alt="GIS Logo" />
               </span>
             </motion.div>
             <div>

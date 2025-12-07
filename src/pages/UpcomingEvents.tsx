@@ -1,5 +1,6 @@
-import { motion, useInView } from "motion/react";
-import { useRef, useState, useMemo } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState, useMemo, useEffect } from "react";
+import axios from "axios";
 import { Calendar, MapPin, Clock, Users, Sparkles, ChevronLeft, ChevronRight, Search, Filter, X } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
@@ -51,34 +52,41 @@ export function UpcomingEvents() {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [filterType, setFilterType] = useState("all");
+  const [events, setEvents] = useState<any[]>([]);
   const eventsPerPage = 10;
 
-  const allEvents = [
-    // {
-    //   title: "Global Insight Series #003",
-    //   date: "November 28, 2025",
-    //   day: "28",
-    //   month: "November",
-    //   time: "14:00 - 15:30 WIB",
-    //   location: "Zoom Meeting",
-    //   type: "Webinar",
-    //   participants: "-",
-    //   description: 
-    //     `UPN "Veteran" Jawa Timur will host the international webinar "Global Insight Series #003" with the theme "Innovations In Water Treatment" on November 28, 2025, from 14.00 to 15.30 (Western Indonesia Time) via Zoom Meeting. This event, which aims to explore advanced technologies for sustainable water management and SDG 6, will feature two distinguished speakers: <b>Dr. N Balasubramanian</b>, discussing Hybrid Membrane Bioreactors for wastewater treatment, and <b>Gayan Amarasooriya</b>, addressing global challenges through advanced filtration technologies. The webinar invites students, researchers, and academics to collaborate on future water solutions.`,
-    //   registrationLink: "https://zoom.us/j/99672737541?pwd=TOe3BzJJP6MNa3ebV4NShrJS5vuEDo.1",
-    //   poster: "assets/event/event3.jpg",
-    // },
-  ];
-
-  // Get unique event types for filter
-  const eventTypes = useMemo(() => {
-    const types = allEvents.map(event => event.type);
-    return ["all", ...Array.from(new Set(types))];
+  useEffect(() => {
+    fetchEvents();
   }, []);
+
+  const fetchEvents = async () => {
+    try {
+      const res = await axios.get("/api/events");
+      const allEvents = res.data.map((e: any) => ({
+        ...e,
+        // Parse date for display
+        month: new Date(e.date).toLocaleString('default', { month: 'long' }),
+        day: new Date(e.date).getDate(),
+      }));
+
+      // Filter for UPCOMING events (date >= today)
+      const upcoming = allEvents.filter((e: any) => new Date(e.date) >= new Date());
+      setEvents(upcoming);
+    } catch (error) {
+      console.error("Failed to fetch events");
+    }
+  };
+
+  const getEventTypes = () => {
+     // If we add 'type' to backend schema later, we can dynamic this.
+     // For now assume all are Webinars or parse from title/description if smart
+     return ["all", "Webinar", "Workshop"]; 
+  };
+  const eventTypes = getEventTypes();
 
   // Filter and search events
   const filteredEvents = useMemo(() => {
-    let filtered = allEvents;
+    let filtered = events;
 
     // Apply type filter
     if (filterType !== "all") {
@@ -97,7 +105,7 @@ export function UpcomingEvents() {
     }
 
     return filtered;
-  }, [searchQuery, filterType]);
+  }, [searchQuery, filterType, events]);
 
   // Calculate pagination
   const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
@@ -404,9 +412,9 @@ export function UpcomingEvents() {
                 >
                   <Search className="w-20 h-20 text-gray-300 mx-auto mb-4" />
                 </motion.div>
-                <h3 className="text-2xl text-gray-800 mb-2">No Events Found</h3>
+                <h3 className="text-2xl text-gray-800 mb-2">No Upcoming Events Found</h3>
                 <p className="text-gray-600 mb-6">
-                  Try adjusting your search or filters to find what you're looking for.
+                  Check back later for new events, or browse our previous events.
                 </p>
                 <motion.button
                   onClick={handleResetFilters}
@@ -459,7 +467,7 @@ export function UpcomingEvents() {
                       <div className="space-y-3 mb-6">
                         <div className="flex items-start text-gray-700">
                           <Calendar className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-[var(--forest-green)]" />
-                          <span>{event.date}</span>
+                          <span>{new Date(event.date).toLocaleDateString()}</span>
                         </div>
                         <div className="flex items-start text-gray-700">
                           <Clock className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-[var(--forest-green)]" />
@@ -469,16 +477,14 @@ export function UpcomingEvents() {
                           <MapPin className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-[var(--forest-green)]" />
                           <span>{event.location}</span>
                         </div>
-                        <div className="flex items-start text-gray-700">
-                          <Users className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-[var(--forest-green)]" />
-                          <span>{event.participants}</span>
-                        </div>
+                        {/* Participants removed as it's not in DB yet */}
                       </div>
 
                       <p className="text-gray-600 leading-relaxed mb-6">
                         <div dangerouslySetInnerHTML={{ __html: event.description }} />
                       </p>
 
+                      {event.registrationLink && (
                       <motion.a
                         href={event.registrationLink}
                         target="_blank"
@@ -490,6 +496,7 @@ export function UpcomingEvents() {
                         Join Now  
                         <Sparkles className="w-4 h-4 ml-2" />
                       </motion.a>
+                      )}
                     </div>
 
                     {/* Event Poster - Right */}
@@ -499,11 +506,17 @@ export function UpcomingEvents() {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
                       >
+                        {event.poster ? (
                         <ImageWithFallback
                           src={event.poster}
                           alt={`${event.title} Poster`}
                           className="w-full h-full object-cover"
                         />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
+                            No Poster
+                          </div>
+                        )}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                       </motion.div>
                     </div>
