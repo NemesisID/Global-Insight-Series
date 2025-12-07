@@ -295,8 +295,15 @@ app.get('/api/dashboard/stats', async (_req, res) => {
 app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
   console.error('Unhandled Error:', err);
   if (err instanceof multer.MulterError) {
-    if (err.code === 'LIMIT_FILE_SIZE') {
-      return res.status(413).json({ error: 'File too large (Max 50MB)' });
+    switch (err.code) {
+      case 'LIMIT_FILE_SIZE':
+        return res.status(413).json({ error: 'File too large (Max 50MB)' });
+      case 'LIMIT_FIELD_VALUE':
+        return res.status(413).json({ error: 'Article content too long (Max 50MB)' });
+      case 'LIMIT_UNEXPECTED_FILE':
+        return res.status(400).json({ error: `Unexpected file field: ${err.field}` });
+      default:
+        return res.status(400).json({ error: `Upload error: ${err.message} (${err.code})` });
     }
   }
   res.status(500).json({ error: err.message || 'Internal Server Error' });
