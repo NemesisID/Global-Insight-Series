@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 import { Plus, Pencil, Trash2, X, Save, Image as ImageIcon } from "lucide-react";
 import { toast } from "sonner";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import { PosterUpload } from "../../components/PosterUpload";
 
 interface NewsItem {
   id: number;
@@ -16,14 +17,15 @@ interface NewsItem {
 
 export function AdminNews() {
   const [news, setNews] = useState<NewsItem[]>([]);
-  const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState<number | null>(null);
 
   // Form State
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState(""); // Rich text content
+  const [content, setContent] = useState("");
   const [image, setImage] = useState("");
+  const [imageFile, setImageFile] = useState<File | null>(null);
   const [author, setAuthor] = useState("");
 
   useEffect(() => {
@@ -32,27 +34,16 @@ export function AdminNews() {
 
   const fetchNews = async () => {
     try {
-      setIsLoading(true);
       const res = await axios.get("/api/news");
-      // Ensure we always have an array
-      setNews(Array.isArray(res.data) ? res.data : []);
+      if (Array.isArray(res.data)) {
+        setNews(res.data);
+      } else {
+        setNews([]);
+      }
     } catch (error) {
       console.error("Failed to fetch news", error);
-      toast.error("Failed to load news");
-      setNews([]); // Set empty array on error
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImage(reader.result as string);
-      };
-      reader.readAsDataURL(file);
+      toast.error("Failed to fetch news");
+      setNews([]);
     }
   };
 
@@ -60,13 +51,24 @@ export function AdminNews() {
     e.preventDefault();
     try {
       setIsLoading(true);
-      const payload = { title, content, image, author };
+      const formData = new FormData();
+      formData.append('title', title);
+      formData.append('content', content);
+      formData.append('author', author);
+      
+      if (imageFile) {
+        formData.append('image', imageFile);
+      }
+
+      const headers = {
+        'Content-Type': 'multipart/form-data',
+      };
       
       if (editId) {
-        await axios.put(`/api/news/${editId}`, payload);
+        await axios.put(`/api/news/${editId}`, formData, { headers });
         toast.success("News updated successfully");
       } else {
-        await axios.post("/api/news", payload);
+        await axios.post("/api/news", formData, { headers });
         toast.success("News created successfully");
       }
       
@@ -86,6 +88,7 @@ export function AdminNews() {
     setTitle(item.title);
     setContent(item.content);
     setImage(item.image);
+    setImageFile(null);
     setAuthor(item.author || "");
     setIsEditing(true);
   };
@@ -107,6 +110,7 @@ export function AdminNews() {
     setTitle("");
     setContent("");
     setImage("");
+    setImageFile(null);
     setAuthor("");
   };
 
@@ -159,50 +163,35 @@ export function AdminNews() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Cover Image</label>
-            <div className="flex items-center space-x-4">
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageUpload}
-                className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[var(--forest-green)]/10 file:text-[var(--forest-green)] hover:file:bg-[var(--forest-green)]/20"
-              />
-              {image && (
-                <div className="h-16 w-16 rounded overflow-hidden border border-gray-200">
-                  <img src={image} alt="Preview" className="h-full w-full object-cover" />
-                </div>
-              )}
-            </div>
+             <PosterUpload 
+                posterPreview={image}
+                posterFile={imageFile}
+                onFileChange={setImageFile}
+                onPreviewChange={setImage}
+             />
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Content</label>
-            <div className="h-96 mb-12">
+            <div className="h-64 mb-12">
               <ReactQuill 
                 theme="snow" 
                 value={content} 
-                onChange={setContent} 
+                onChange={setContent}
                 modules={modules}
                 className="h-full"
               />
             </div>
           </div>
 
-          <div className="flex justify-end pt-6 border-t border-gray-100">
-            <button
-              type="button"
-              onClick={() => { setIsEditing(false); resetForm(); }}
-              className="px-6 py-2 mr-4 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
-            >
-              Cancel
-            </button>
+          <div className="flex justify-end pt-6">
             <button
               type="submit"
               disabled={isLoading}
-              className="px-6 py-2 bg-[var(--forest-green)] text-white rounded-lg hover:bg-[var(--olive-green)] transition-colors flex items-center"
+              className="flex items-center gap-2 px-6 py-2 bg-[var(--forest-green)] text-white rounded-lg hover:bg-emerald-700 disabled:opacity-50 transition-colors"
             >
-              <Save className="w-4 h-4 mr-2" />
-              {isLoading ? "Saving..." : "Save Article"}
+              <Save className="w-4 h-4" />
+              {isLoading ? "Saving..." : "Save News"}
             </button>
           </div>
         </form>

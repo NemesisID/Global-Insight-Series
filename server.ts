@@ -11,8 +11,12 @@ const PORT = process.env.PORT || 3001;
 
 // Multer configuration for file uploads
 const storage = multer.diskStorage({
-  destination: (_req, _file, cb) => {
-    const uploadDir = 'public/uploads/events';
+  destination: (_req, file, cb) => {
+    let folder = 'others';
+    if (file.fieldname === 'poster') folder = 'events';
+    else if (file.fieldname === 'image') folder = 'news';
+    
+    const uploadDir = `public/uploads/${folder}`;
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir, { recursive: true });
     }
@@ -20,7 +24,7 @@ const storage = multer.diskStorage({
   },
   filename: (_req, file, cb) => {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-    cb(null, 'poster-' + uniqueSuffix + path.extname(file.originalname));
+    cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
   }
 });
 
@@ -178,38 +182,56 @@ app.get('/api/news/:id', async (req, res) => {
   }
 });
 
-app.post('/api/news', async (req, res) => {
+app.post('/api/news', upload.single('image'), async (req, res) => {
   try {
-    const { title, content, image, author } = req.body;
+    const { title, content, author } = req.body;
+    const imagePath = req.file ? `/uploads/news/${req.file.filename}` : null;
+
     const news = await prisma.news.create({
       data: {
         title,
         content,
-        image,
+        image: imagePath || '', // Fallback or handle optional
         author,
       },
     });
     res.json(news);
   } catch (error) {
+      console.error('Error creating news:', error);
     res.status(500).json({ error: 'Failed to create news' });
   }
 });
 
-app.put('/api/news/:id', async (req, res) => {
+app.put('/api/news/:id', upload.single('image'), async (req, res) => {
   try {
     const { id } = req.params;
-    const { title, content, image, author } = req.body;
+    const { title, content, author } = req.body;
+    
+    const existingNews = await prisma.news.findUnique({ where: { id: Number(id) } });
+    let imagePath = existingNews?.image;
+
+    if (req.file) {
+      if (existingNews?.image && existingNews.image.startsWith('/uploads/')) {
+        const oldPath = 'public' + existingNews.image;
+        if (fs.existsSync(oldPath)) {
+            try { fs.unlinkSync(oldPath); } catch(e) {}
+        }
+      }
+      imagePath = `/uploads/news/${req.file.filename}`;
+    }
+
     const news = await prisma.news.update({
       where: { id: Number(id) },
       data: {
         title,
         content,
-        image,
+        image: imagePath,
         author,
       },
     });
     res.json(news);
   } catch (error) {
+      console.error('Error updating news:', error);
     res.status(500).json({ error: 'Failed to update news' });
   }
 });
@@ -217,6 +239,15 @@ app.put('/api/news/:id', async (req, res) => {
 app.delete('/api/news/:id', async (req, res) => {
   try {
     const { id } = req.params;
+    const newsItem = await prisma.news.findUnique({ where: { id: Number(id) } });
+
+    if (newsItem?.image && newsItem.image.startsWith('/uploads/')) {
+        const filePath = 'public' + newsItem.image;
+        if (fs.existsSync(filePath)) {
+            try { fs.unlinkSync(filePath); } catch(e) {}
+        }
+    }
+
     await prisma.news.delete({
       where: { id: Number(id) },
     });
