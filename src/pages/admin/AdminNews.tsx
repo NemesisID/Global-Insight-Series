@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import { Plus, Pencil, Trash2, X, Save, Image as ImageIcon } from "lucide-react";
 import { toast } from "sonner";
@@ -9,9 +9,9 @@ import { PosterUpload } from "../../components/PosterUpload";
 // @ts-ignore
 import ImageResize from 'quill-image-resize-module-react';
 
-// Configure Font Sizes (Pixel based)
+// Configure Font Sizes (Pixel based) - Allow custom values
 const Size = Quill.import('attributors/style/size');
-Size.whitelist = ['8px', '9px', '10px', '11px', '12px', '14px', '16px', '18px', '20px', '22px', '24px', '26px', '28px', '36px', '48px', '72px'];
+Size.whitelist = null; // ALL pixel values allowed
 Quill.register(Size, true);
 
 Quill.register('modules/imageResize', ImageResize);
@@ -124,20 +124,21 @@ export function AdminNews() {
     setAuthor("");
   };
 
-  const modules = {
-    toolbar: [
-      [{ 'header': [1, 2, 3, false] }],
-      [{ 'size': ['8px', '9px', '10px', '11px', '12px', '14px', '16px', '18px', '20px', '22px', '24px', '26px', '28px', '36px', '48px', '72px'] }],
-      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-      [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
-      ['link', 'image'],
-      ['clean']
-    ],
+  const modules = useMemo(() => ({
+    toolbar: {
+      container: [
+        [{ 'size': ['8px', '9px', '10px', '11px', '12px', '14px', '16px', '18px', '20px', '22px', '24px', '26px', '28px', '36px', '48px', '72px'] }],
+        ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+        [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
+        ['link', 'image'],
+        ['clean']
+      ]
+    },
     imageResize: {
       parchment: Quill.import('parchment'),
       modules: ['Resize', 'DisplaySize']
     }
-  };
+  }), []);
 
   if (isEditing) {
     return (
