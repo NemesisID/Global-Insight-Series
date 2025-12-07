@@ -1,6 +1,6 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
-import { Sparkles, BookOpen } from "lucide-react";
+import { Sparkles, BookOpen, Users, Globe } from "lucide-react";
 import { FloatingElements } from "../components/FloatingElements";
 
 function AnimatedSection({
