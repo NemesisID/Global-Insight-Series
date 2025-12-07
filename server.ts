@@ -291,6 +291,17 @@ app.get('/api/dashboard/stats', async (_req, res) => {
   }
 });
 
+// Global Error Handler
+app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+  console.error('Unhandled Error:', err);
+  if (err instanceof multer.MulterError) {
+    if (err.code === 'LIMIT_FILE_SIZE') {
+      return res.status(413).json({ error: 'File too large (Max 50MB)' });
+    }
+  }
+  res.status(500).json({ error: err.message || 'Internal Server Error' });
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
