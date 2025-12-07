@@ -7,9 +7,18 @@ interface PosterUploadProps {
   posterFile: File | null;
   onFileChange: (file: File | null) => void;
   onPreviewChange: (preview: string) => void;
+  className?: string; // Container class
+  imageClassName?: string; // Image class
 }
 
-export function PosterUpload({ posterPreview, posterFile, onFileChange, onPreviewChange }: PosterUploadProps) {
+export function PosterUpload({ 
+  posterPreview, 
+  posterFile, 
+  onFileChange, 
+  onPreviewChange,
+  className = "",
+  imageClassName = "w-full h-auto max-h-[500px] object-contain"
+}: PosterUploadProps) {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -66,11 +75,11 @@ export function PosterUpload({ posterPreview, posterFile, onFileChange, onPrevie
 
       {/* Large Preview */}
       {posterPreview && (
-        <div className="relative rounded-xl overflow-hidden border-2 border-gray-200 shadow-lg bg-gray-50">
+        <div className={`relative rounded-xl overflow-hidden border-2 border-gray-200 shadow-lg bg-gray-50 ${className}`}>
           <img 
             src={posterPreview} 
             alt="Poster Preview" 
-            className="w-full h-auto max-h-[500px] object-contain" 
+            className={imageClassName} 
           />
           <button
             type="button"

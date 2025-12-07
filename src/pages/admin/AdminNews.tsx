@@ -2,9 +2,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Plus, Pencil, Trash2, X, Save, Image as ImageIcon } from "lucide-react";
 import { toast } from "sonner";
-import ReactQuill from 'react-quill';
+import ReactQuill, { Quill } from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { PosterUpload } from "../../components/PosterUpload";
+
+// @ts-ignore
+import ImageResize from 'quill-image-resize-module-react';
+
+Quill.register('modules/imageResize', ImageResize);
 
 interface NewsItem {
   id: number;
@@ -116,12 +121,17 @@ export function AdminNews() {
 
   const modules = {
     toolbar: [
-      [{ 'header': [1, 2, false] }],
+      [{ 'header': [1, 2, 3, false] }],
+      [{ 'size': ['small', false, 'large', 'huge'] }],
       ['bold', 'italic', 'underline', 'strike', 'blockquote'],
       [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
       ['link', 'image'],
       ['clean']
     ],
+    imageResize: {
+      parchment: Quill.import('parchment'),
+      modules: ['Resize', 'DisplaySize']
+    }
   };
 
   if (isEditing) {
@@ -168,12 +178,14 @@ export function AdminNews() {
                 posterFile={imageFile}
                 onFileChange={setImageFile}
                 onPreviewChange={setImage}
+                className="aspect-video w-full max-w-2xl"
+                imageClassName="w-full h-full object-cover"
              />
           </div>
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Content</label>
-            <div className="h-64 mb-12">
+            <div className="h-96 mb-12">
               <ReactQuill 
                 theme="snow" 
                 value={content} 
