@@ -352,58 +352,6 @@ export function AdminEvents() {
           </table>
         </div>
       </div>
-
-      {/* Mobile Card View */}
-      <div className="sm:hidden space-y-4">
-        {events.length === 0 ? (
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center text-gray-500">
-            No events found. Create one to get started.
-          </div>
-        ) : (
-          events.map((item) => (
-            <div key={item.id} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="relative h-48 bg-gray-100">
-                {item.poster ? (
-                  <img src={item.poster} alt={item.title} className="w-full h-full object-cover" />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-gray-400">
-                    <ImageIcon className="w-12 h-12" />
-                  </div>
-                )}
-                <div className="absolute top-2 right-2 flex space-x-2">
-                  <span className="px-2 py-1 bg-white/90 backdrop-blur text-xs font-semibold text-gray-700 rounded-md shadow-sm">
-                    {item.type}
-                  </span>
-                </div>
-              </div>
-              
-              <div className="p-4">
-                <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
-                <p className="text-sm text-gray-500 mb-4">
-                  {new Date(item.date).toLocaleDateString()} • {item.time}
-                </p>
-                
-                <div className="flex items-center gap-2 pt-3 border-t border-gray-100">
-                  <button
-                    onClick={() => handleEdit(item)}
-                    className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
-                  >
-                    <Pencil className="w-4 h-4" />
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => handleDelete(item.id)}
-                    className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-red-600 bg-red-50 hover:bg-red-100 rounded-lg transition-colors"
-                  >
-                    <Trash2 className="w-4 h-4" />
-                    Delete
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))
-        )}
-      </div>
     </div>
   );
 }
