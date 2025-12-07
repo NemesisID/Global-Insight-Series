@@ -1,6 +1,7 @@
 {
       "name": "Global-Insight-Series-Website",
       "version": "0.1.0",
+      "type": "module",
       "private": true,
       "dependencies": {
             "@prisma/client": "^5.10.2",

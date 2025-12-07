@@ -42,9 +42,12 @@ export function AdminEvents() {
     try {
       setIsLoading(true);
       const res = await axios.get("/api/events");
-      setEvents(res.data);
+      // Ensure we always have an array
+      setEvents(Array.isArray(res.data) ? res.data : []);
     } catch (error) {
+      console.error("Failed to load events:", error);
       toast.error("Failed to load events");
+      setEvents([]); // Set empty array on error
     } finally {
       setIsLoading(false);
     }
