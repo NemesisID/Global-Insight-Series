@@ -34,10 +34,12 @@ export function AdminNews() {
     try {
       setIsLoading(true);
       const res = await axios.get("/api/news");
-      setNews(res.data);
+      // Ensure we always have an array
+      setNews(Array.isArray(res.data) ? res.data : []);
     } catch (error) {
       console.error("Failed to fetch news", error);
       toast.error("Failed to load news");
+      setNews([]); // Set empty array on error
     } finally {
       setIsLoading(false);
     }
